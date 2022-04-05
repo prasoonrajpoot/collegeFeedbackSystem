@@ -1,0 +1,25 @@
+{
+  "name": "itw-project-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betusingh890/CollegeFeedbackSystem.git"
+  },
+  "author": "Prasoon Rajpoot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/betusingh890/CollegeFeedbackSystem/issues"
+  },
+  "homepage": "https://github.com/betusingh890/CollegeFeedbackSystem#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.10"
+  }
+}
