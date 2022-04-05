@@ -9,11 +9,14 @@ const studentScheema = new mongoose.Schema({
         type : String,
         required : true
     },
+    password: {
+        type : String,
+        required : false
+    },
     mobile : {
         type : Number,
         required : false
     },
-
 })
 
 

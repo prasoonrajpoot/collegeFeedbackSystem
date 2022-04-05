@@ -9,7 +9,7 @@ var app = express();
 connectDB();
 
 
-var PORT = 6000;
+var PORT = 8000;
 
 app.listen(PORT, (err)=> 
 {
