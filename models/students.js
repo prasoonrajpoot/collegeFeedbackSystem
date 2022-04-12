@@ -22,6 +22,10 @@ const studentScheema = new mongoose.Schema({
         type: Number,
         required: true
     },
+    section: {
+        type: String,
+        required: true
+    },
     branch: {
         type: String,
         required: true
