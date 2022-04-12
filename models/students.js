@@ -17,6 +17,14 @@ const studentScheema = new mongoose.Schema({
         type : Number,
         required : false
     },
+    semester: {
+        type: Number,
+        required: true
+    },
+    branch: {
+        type: String,
+        required: true
+    }
 })
 
 
