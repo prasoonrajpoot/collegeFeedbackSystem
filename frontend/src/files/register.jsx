@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 
 function Register(){
@@ -9,10 +10,19 @@ function Register(){
     var [semester, setSemester] = React.useState("");
     var [branch, setBranch] = React.useState("");
 
-    
+    const sendRegisterData = async() => {
+        var object = {name, email, password, mobile, semester, branch};
+
+        await axios.post("/register", object);
+    }
+
+    sendRegisterData();
+
+
     return (
         <div>
             this is registeration route
+            
         </div>
     )
 };
