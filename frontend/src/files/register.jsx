@@ -25,7 +25,7 @@ function Register(){
         <div>
             this is registeration route
             <form action="">
-                <input type="text"  onChange = {(e) =>  setName(e.target.value)}
+                <input type="text" placeholder = "Name"  onChange = {(e) =>  setName(e.target.value)}
                 value = {name}/>
                 {/* intital */}
             </form>
