@@ -22,6 +22,10 @@ function Register(){
     return (
         <div>
             this is registeration route
+            <form action="">
+                <input type="text"  onChange = {(e) =>  setName(e.target.value)}
+                value = {name}/>
+            </form>
             
         </div>
     )
