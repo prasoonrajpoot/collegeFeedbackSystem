@@ -27,6 +27,7 @@ function Register(){
             <form action="">
                 <input type="text"  onChange = {(e) =>  setName(e.target.value)}
                 value = {name}/>
+                {/* intital */}
             </form>
             
         </div>
