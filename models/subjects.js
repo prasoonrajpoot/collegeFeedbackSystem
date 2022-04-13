@@ -15,6 +15,8 @@ const subjectScheema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId, ref: Teachers
     },
 
+    
+
 })
 
 const Subjects = mongoose.model("Subject", subjectScheema);
