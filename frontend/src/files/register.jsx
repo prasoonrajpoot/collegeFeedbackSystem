@@ -50,11 +50,12 @@ function Register(){
     // }
 
     const responseSuccessGoogle = (response) => {
-        console.log(response);
-        setName(response.Du.tf);
-        setEmail(response.Du.tv);
-        setAuthToken(response.accessToken);
-        setBranch(getBranchFromEmail(response.Du.tv))
+        // console.log(response.profileObj);
+        var data = response.profileObj;
+        setName(data.name);
+        setEmail(data.email);
+        setAuthToken(data.googleId);
+        setBranch(getBranchFromEmail(data.email))
     }
 
     const responseFailGoogle = (response) => {
