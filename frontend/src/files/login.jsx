@@ -8,6 +8,7 @@ function Login(){
 
     var [userEmail, setUserEmail] = React.useState("");
     var [password, setPassword] = React.useState("");
+    var [authCode, setAuthCode] = React.useState("");
 
     const sendLoginData = async() => {
         var object = {userEmail, password};
@@ -26,6 +27,8 @@ function Login(){
 
     const responseSuccessGoogle = (response) => {
         console.log(response);
+        
+
     }
 
     const responseFailGoogle = (response) => {

@@ -2,9 +2,15 @@ import axios from "axios";
 import React from "react";
 import { Link } from 'react-router-dom'
 import GoogleLogin from 'react-google-login';
+import { useSelector, useDispatch } from 'react-redux'
+import {useNavigate} from "react-router-dom";
 
 
+<<<<<<< HEAD
 
+=======
+import { LogInAction, LogOutActon, SetEmailAction } from "../actions";
+>>>>>>> f0f2be4d12bfcbe574a2f2022fe928f56b11828c
 function Register(){
 
     var [name , setName ] = React.useState("");
@@ -15,6 +21,10 @@ function Register(){
     var [auth_token, setAuthToken] = React.useState("");
     var [branch , setBranch ] = React.useState("");
 
+    const dispatch = useDispatch();
+    let navigate = useNavigate();
+
+
     function getBranchFromEmail(userEmail){
         return userEmail.slice(4,7);
     }
@@ -24,7 +34,13 @@ function Register(){
         var object = {name, email, password, semester, auth_token, section, branch};
         console.log(object);
 
-        await axios.post("/register", object);
+        var response = await axios.post("/register", object);
+        if(response.data == "succesfull"){
+            alert("registeration sucessfull");
+            dispatch(LogInAction());
+            dispatch(SetEmailAction(email));
+            navigate("/");
+        }
     }
 
     // const OauthbuttonClicked = async(event) => {
