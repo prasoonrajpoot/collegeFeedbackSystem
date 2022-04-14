@@ -4,30 +4,33 @@ import axios from "axios";
 
 function Login(){
 
-
-    var [userName, setUserName] = React.useState("");
+    var [userEmail, setUserEmail] = React.useState("");
     var [password, setPassword] = React.useState("");
 
-    const sendData = async() => {
-        
+    const sendLoginData = async() => {
+        var object = {userEmail, password};
+
+        await axios.post("/register", object);
     }
-    
-    console.log("we are here")
+
+    sendLoginData();
+
     return (
         <div>
-            <h1>Login</h1>
-            <form action="">
-                <label htmlFor="">Username</label><br />
-                <input type="text" onChange={(e) => setUserName(e.target.value)} /><br />
-                <label htmlFor="">Password</label><br />
-                <input type="text" onChange={(e) => setPassword(e.target.value)} /><br />
-                <input type="submit" />
-            </form>
+            <div>
+                <h1>Login</h1>
+                <form action="">
+                    <label htmlFor="">Email</label><br />
+                    <input type="email" onChange={(e) => setUserEmail(e.target.value)} /><br />
+                    <label htmlFor="">Password</label><br />
+                    <input type="password" onChange={(e) => setPassword(e.target.value)} /><br />
+                    <input type="submit" />
+                    <input type="reset" /><br />
+                    <button>Login with Google</button>
+                </form>
+            </div>
         </div>
     )
 }
 
-
 export default Login;
-
-
