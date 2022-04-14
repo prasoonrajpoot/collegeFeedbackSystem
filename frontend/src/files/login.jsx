@@ -31,6 +31,14 @@ function Login(){
 
     sendLoginData();
 
+    const responseSuccessGoogle = (response) => {
+        console.log(response);
+    }
+
+    const responseFailGoogle = (response) => {
+        console.log(response)
+    }
+
     return (
         <div>
             <div>

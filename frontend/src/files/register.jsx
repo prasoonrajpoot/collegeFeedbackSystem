@@ -11,22 +11,28 @@ function Register(){
     var [password, setPassword] = React.useState("");
     var [semester, setSemester] = React.useState("");
     var [section, setSection] = React.useState("");
+    var [auth_token, setAuthToken] = React.useState("");
 
-    const sendRegisterData = async() => {
-        var object = {name, email, password, semester};
+    const sendRegisterData = async(event) => {
+        event.preventDefault();
+        var object = {name, email, password, semester, auth_token, section};
+        console.log(object);
 
         await axios.post("/register", object);
     }
 
-    const OauthbuttonClicked = async(event) => {
-    event.preventDefault();
+    // const OauthbuttonClicked = async(event) => {
+    // event.preventDefault();
     
-    await axios.get("/auth/google");
-    console.log("we are here");
-    }
+    // await axios.get("/auth/google");
+    // console.log("we are here");
+    // }
 
     const responseSuccessGoogle = (response) => {
         console.log(response);
+        setName(response.Du.tf);
+        setEmail(response.Du.tv);
+        setAuthToken(response.accessToken);
     }
 
     const responseFailGoogle = (response) => {
@@ -45,7 +51,7 @@ function Register(){
                     <input type="number" placeholder="Semester" min="1" max="8" onChange={(e) => setSemester(e.target.value)} value = {semester}/>
                     <input type="text" placeholder="Section" onChange={(e) => setSection(e.target.value)} value = {section} /><br />
                     <input type="password" placeholder="Password"  onChange={(e) => setPassword(e.target.value)} value = {password} /><br />
-                    <input type="submit" />
+                    <button onClick = {sendRegisterData}>Submit</button>
                     <input type="reset" /><br />
                     <GoogleLogin
                         clientId="396893215612-v514renemo3tgeb85egqv0ltej6o7uip.apps.googleusercontent.com"
