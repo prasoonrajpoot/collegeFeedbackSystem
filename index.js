@@ -21,14 +21,12 @@ dotenv.config();
 connectDB();
 
 app.use("/register", RegisterFile);
-
-app.use("/auth/google", AuthGoogleFile );
-
 app.use("/login", LoginFile);
 
 
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static("frontend/build"));  
+    console.log("we are here");
     app.get("*", (req,res) =>{
         res.sendFile(path.resolve(__dirname,'frontend','build',         
                       'index.html'));
@@ -38,10 +36,8 @@ if(process.env.NODE_ENV === 'production'){
 
 console.log(process.env.PORT);
 
-const PORT = process.env.PORT || 8000;
+var PORT = process.env.PORT || 8000;
 
-app.listen(PORT, () =>{ 
-    console.log(`Server is listening on port ${PORT}...`)
-});
-
-
+app.listen(PORT, ()=>{
+    console.log("backend running at port " + PORT);
+})
