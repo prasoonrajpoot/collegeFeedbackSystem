@@ -26,7 +26,7 @@ function Register(){
         <div>
             <h1>Register</h1>
             <form action="">
-                <input type="text" placeholder = "Name"  onChange = {(e) =>  setName(e.target.value)}
+                <input type="text" placeholder = "Name"  onChange = {(e) =>  setName(e.target.value)} value={name} />
                 <label htmlFor="">Name</label><br />
                 <input type="text" placeholder="Name" onChange = {(e) =>  setName(e.target.value)}
                 value = {name}/>
