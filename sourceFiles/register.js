@@ -22,18 +22,33 @@ app.post("/", function(req, res){
         branch: data.branch,
     })
 
-    try{
-        // console.log("reached here")
-        
-        student.save()
-        res.send("succesfull");
-    }
-    catch(err){
-        console.log("there wasa error saving usr");
-        console.log(err);
-        res.send('fucked');
+    Students.findOne({email: data.email}, function(err, result){
+        if(err){
+            console.log(err);
+        }
+        else{
+            if(result == null){
 
-    }
+                try{
+                    // console.log("reached here")
+                    
+                    student.save()
+                    res.send("succesfull");
+                }
+                catch(err){
+                    console.log("there wasa error saving usr");
+                    console.log(err);
+                    res.send('fucked');
+            
+                }
+            }
+            else{
+                res.send("Duplicate Account");
+            }
+        }
+    })
+
+
 
 
 
