@@ -6,11 +6,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import {useNavigate} from "react-router-dom";
 
 
-<<<<<<< HEAD
-
-=======
 import { LogInAction, LogOutActon, SetEmailAction } from "../actions";
->>>>>>> f0f2be4d12bfcbe574a2f2022fe928f56b11828c
 function Register(){
 
     var [name , setName ] = React.useState("");
