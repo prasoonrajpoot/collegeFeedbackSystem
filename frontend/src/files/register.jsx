@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-
+import { Link } from 'react-router-dom'
 import GoogleLogin from 'react-google-login';
 
 
@@ -53,13 +53,14 @@ function Register(){
                     <input type="password" placeholder="Password"  onChange={(e) => setPassword(e.target.value)} value = {password} /><br />
                     <button onClick = {sendRegisterData}>Submit</button>
                     <input type="reset" /><br />
-                    <GoogleLogin 
-                            clientId="396893215612-v514renemo3tgeb85egqv0ltej6o7uip.apps.googleusercontent.com"
-                            buttonText="Login"
-                            onSuccess={responseSuccessGoogle}
-                            onFailure={responseFailGoogle}
-                            cookiePolicy={'single_host_origin'}
-  />
+                    <GoogleLogin
+                        clientId="396893215612-v514renemo3tgeb85egqv0ltej6o7uip.apps.googleusercontent.com"
+                        buttonText="Login"
+                        onSuccess={responseSuccessGoogle}
+                        onFailure={responseFailGoogle}
+                        cookiePolicy={'single_host_origin'}
+                    /><br />
+                    <span>Already have an account.<Link to="/login">Login Here</Link></span>
                 </form>
             </div>            
         </div>
