@@ -9,8 +9,7 @@ app.use(bodyParser.json());
 
 app.post("/", function(req, res){
     var data = req.body;
-
-    console.log(req.data)
+    console.log(data);
 
 })
 

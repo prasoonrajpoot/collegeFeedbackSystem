@@ -69,6 +69,7 @@ function Register(){
                     <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value = {email} /><br />
                     <input type="number" placeholder="Semester" min="1" max="8" onChange={(e) => setSemester(e.target.value)} value = {semester}/>
                     <input type="text" placeholder="Section" onChange={(e) => setSection(e.target.value)} value = {section} /><br />
+                    <input type="text" placeholder="branch"  onChange={(e) => setBranch(e.target.value)} value = {branch} /><br />
                     <input type="password" placeholder="Password"  onChange={(e) => setPassword(e.target.value)} value = {password} /><br />
                     <button onClick = {sendRegisterData}>Submit</button>
                     <input type="reset" /><br />
