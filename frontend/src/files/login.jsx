@@ -11,24 +11,20 @@ function Login(){
     var [authCode, setAuthCode] = React.useState("");
 
     const sendLoginData = async() => {
-        var object = {userEmail, password};
+        var object = {userEmail, password, authCode};
 
-        await axios.post("/register", object);
+        console.log(object)
+
+        var reply = await axios.post("/login", object);
+
+
     }
 
-    const OauthbuttonClicked = async(event) => {
-        event.preventDefault();
-        
-    await axios.get("/auth/google");
-    console.log("we are here");
-    }
-
-    sendLoginData();
 
     const responseSuccessGoogle = (response) => {
         console.log(response);
-        
-
+        setAuthCode(response.accessToken);
+        sendLoginData();
     }
 
     const responseFailGoogle = (response) => {
