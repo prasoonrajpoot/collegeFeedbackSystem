@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Link } from 'react-router-dom'
 
 
 function Login(){
@@ -26,7 +27,9 @@ function Login(){
                     <input type="password" onChange={(e) => setPassword(e.target.value)} /><br />
                     <input type="submit" />
                     <input type="reset" /><br />
-                    <button>Login with Google</button>
+                    <button>Login with Google</button><br />
+                    
+                    <span>Don't have an account.<Link to="/register">Register Here</Link></span>
                 </form>
             </div>
         </div>

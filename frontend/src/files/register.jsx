@@ -1,5 +1,6 @@
 import axios from "axios";
 import React from "react";
+import { Link } from 'react-router-dom'
 
 function Register(){
 
@@ -29,7 +30,8 @@ function Register(){
                     <input type="password" placeholder="Password"  onChange={(e) => setPassword(e.target.value)} value = {password} /><br />
                     <input type="submit" />
                     <input type="reset" /><br />
-                    <button>Register with Google</button>
+                    <button>Register with Google</button><br />
+                    <span>Already have an account.<Link to="/login">Login Here</Link></span>
                 </form>
             </div>            
         </div>
