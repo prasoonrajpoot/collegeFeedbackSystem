@@ -7,6 +7,7 @@ import Login from "./files/login.jsx";
 import Register from "./files/register.jsx";
 import Dashboard from "./files/dashboard.jsx";
 import Teachersdashboard from "./files/teachersDashboard.jsx";
+import Admindashboard from "./files/adminDashboard.jsx";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Route  path = "/login"  element = {<Login />}/>
         <Route path = "/register" element = {<Register />}/>
         <Route path = "/dashboard" element = {<Dashboard />}/>
-        < Route  path = "/teachersDashboard" element = {<Teachersdashboard />} />
+        <Route path = "/teachersDashboard" element = {<Teachersdashboard />} />
+        <Route path = "/adminDashboard" element = {<Admindashboard />} />
       </Routes> 
     </Router>
   )
