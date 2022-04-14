@@ -9,13 +9,18 @@ function Register(){
     var [name , setName ] = React.useState("");
     var [email, setEmail] = React.useState("");
     var [password, setPassword] = React.useState("");
-    var [semester, setSemester] = React.useState("");
+    var [semester, setSemester] = React.useState(0);
     var [section, setSection] = React.useState("");
     var [auth_token, setAuthToken] = React.useState("");
+    var [branch , setBranch ] = React.useState("");
+
+    function getBranchFromEmail(userEmail){
+        return userEmail.slice(4,7);
+    }
 
     const sendRegisterData = async(event) => {
         event.preventDefault();
-        var object = {name, email, password, semester, auth_token, section};
+        var object = {name, email, password, semester, auth_token, section, branch};
         console.log(object);
 
         await axios.post("/register", object);
@@ -33,6 +38,7 @@ function Register(){
         setName(response.Du.tf);
         setEmail(response.Du.tv);
         setAuthToken(response.accessToken);
+        setBranch(getBranchFromEmail(response.Du.tv))
     }
 
     const responseFailGoogle = (response) => {

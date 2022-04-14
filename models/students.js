@@ -2,7 +2,6 @@ import mongoose from "mongoose";
 import findOrCreate from "mongoose-findorcreate";
 
 const studentScheema = new mongoose.Schema({
-    _id : mongoose.Schema.Types.ObjectId,
     name : {
         type : String,
         required : true
