@@ -17,8 +17,12 @@ app.post("/", function(req, res){
         name : data.name,
         email: data.email,
         password: data.password,
-        semester: 
+        semester: data.semester,
+        section : data.section,
+        branch: data.branch,
     })
+
+    
 
 
 })
