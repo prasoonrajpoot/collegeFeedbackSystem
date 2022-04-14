@@ -21,14 +21,6 @@ function Login(){
     console.log("we are here");
     }
 
-    const responseSuccessGoogle = (response) => {
-        console.log(response);
-    }
-
-    const responseFailGoogle = (response) => {
-        console.log(response)
-    }
-
     sendLoginData();
 
     const responseSuccessGoogle = (response) => {

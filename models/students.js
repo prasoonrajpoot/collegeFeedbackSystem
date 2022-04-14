@@ -15,10 +15,6 @@ const studentScheema = new mongoose.Schema({
         type : String,
         required : false
     },
-    mobile : {
-        type : Number,
-        required : false
-    },
     semester: {
         type: Number,
         required: true
