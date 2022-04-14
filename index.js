@@ -1,5 +1,5 @@
 import express from "express";
-import 'dotenv/config';
+import dotenv from 'dotenv';
 import bodyParser from "body-parser";
 import path from "path";
 import { fileURLToPath } from 'url';
@@ -17,7 +17,7 @@ import AuthGoogleFile from "./sourceFiles/googleauth.js";
 var app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 
-
+dotenv.config();
 connectDB();
 
 app.use("/register", RegisterFile);
@@ -40,8 +40,7 @@ if(process.env.NODE_ENV === 'production'){
 
 var PORT = process.env.PORT || 8000;
 
-app.listen(PORT, (err)=> 
-{
-    if(err) throw err;
-    else console.log("backend running at PORT " + PORT);
+app.listen(PORT, ()=>{
+    console.log("backend running at port " + PORT);
 })
+
