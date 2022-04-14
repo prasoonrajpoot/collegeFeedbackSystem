@@ -53,7 +53,7 @@ function Register(){
                             onSuccess={responseSuccessGoogle}
                             onFailure={responseFailGoogle}
                             cookiePolicy={'single_host_origin'}
-  />,
+  />
                 </form>
             </div>            
         </div>

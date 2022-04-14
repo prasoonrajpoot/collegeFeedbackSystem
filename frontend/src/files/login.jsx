@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-
+import GoogleLogin from 'react-google-login';
 
 function Login(){
 
@@ -26,7 +26,13 @@ function Login(){
                     <input type="password" onChange={(e) => setPassword(e.target.value)} /><br />
                     <input type="submit" />
                     <input type="reset" /><br />
-                    <button>Login with Google</button>
+                    <GoogleLogin
+                            clientId="396893215612-v514renemo3tgeb85egqv0ltej6o7uip.apps.googleusercontent.com"
+                            buttonText="Login"
+                            onSuccess={responseSuccessGoogle}
+                            onFailure={responseFailGoogle}
+                            cookiePolicy={'single_host_origin'}
+  />
                 </form>
             </div>
         </div>
