@@ -24,11 +24,14 @@ app.post("/", function(req, res){
 
     try{
         // console.log("reached here")
+        
         student.save()
+        res.send("succesfull");
     }
     catch(err){
         console.log("there wasa error saving usr");
         console.log(err);
+        res.send('fucked');
 
     }
 
