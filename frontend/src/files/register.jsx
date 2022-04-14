@@ -79,6 +79,7 @@ function Register(){
                         onSuccess={responseSuccessGoogle}
                         onFailure={responseFailGoogle}
                         cookiePolicy={'single_host_origin'}
+                        uxMode = "redirect"
                     /><br />
                     <span>Already have an account.<Link to="/login">Login Here</Link></span>
                 </form>
