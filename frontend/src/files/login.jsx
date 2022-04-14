@@ -12,21 +12,16 @@ function Login(){
     const sendLoginData = async() => {
         var object = {userEmail, password};
 
-        await axios.post("/register", object);
+        await axios.post("/login", object);
     }
 
-    const OauthbuttonClicked = async(event) => {
-        event.preventDefault();
-        
-    await axios.get("/auth/google");
-    console.log("we are here");
-    }
+
 
     sendLoginData();
 
     const responseSuccessGoogle = (response) => {
         console.log(response);
-        
+
 
     }
 
