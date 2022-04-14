@@ -20,6 +20,8 @@ app.use("/register", RegisterFile);
 
 app.use("/auth/google", AuthGoogleFile );
 
+app.use("/login", LoginFile);
+
 
 
 var PORT = 8000;

@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 
 
-function Dashboard(){
+function teachersDashboard(){
     return (
         <div>
             <div>
@@ -38,6 +38,6 @@ function Dashboard(){
     )
 }
 
-export default Dashboard;
+export default teachersDashboard;
 
 
