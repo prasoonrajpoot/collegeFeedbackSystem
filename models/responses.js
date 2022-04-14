@@ -9,3 +9,6 @@ const responseScheema = mongoose.Schema({
     
 })
 
+var Responses = mongoose.model("Response", responseScheema);
+
+export default Responses;

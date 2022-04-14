@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Link } from 'react-router-dom'
 import GoogleLogin from 'react-google-login';
 
 
@@ -12,6 +13,13 @@ function Login(){
         var object = {userEmail, password};
 
         await axios.post("/register", object);
+    }
+
+    const OauthbuttonClicked = async(event) => {
+        event.preventDefault();
+        
+    await axios.get("/auth/google");
+    console.log("we are here");
     }
 
     sendLoginData();
@@ -36,12 +44,13 @@ function Login(){
                     <input type="submit" />
                     <input type="reset" /><br />
                     <GoogleLogin
-                            clientId="396893215612-v514renemo3tgeb85egqv0ltej6o7uip.apps.googleusercontent.com"
-                            buttonText="Login"
-                            onSuccess={responseSuccessGoogle}
-                            onFailure={responseFailGoogle}
-                            cookiePolicy={'single_host_origin'}
-  />
+                        clientId="396893215612-v514renemo3tgeb85egqv0ltej6o7uip.apps.googleusercontent.com"
+                        buttonText="Login"
+                        onSuccess={responseSuccessGoogle}
+                        onFailure={responseFailGoogle}
+                        cookiePolicy={'single_host_origin'}
+                    /><br />
+                    <span>Don't have an account.<Link to="/register">Register Here</Link></span>
                 </form>
             </div>
         </div>
