@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import findOrCreate from "mongoose-findorcreate";
 
 const studentScheema = new mongoose.Schema({
     _id : mongoose.Schema.Types.ObjectId,
@@ -32,6 +33,7 @@ const studentScheema = new mongoose.Schema({
     }
 })
 
+studentScheema.plugin(findOrCreate);
 
 var Students = mongoose.model("Student", studentScheema);
 
