@@ -2,33 +2,55 @@ import React from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom'
 import GoogleLogin from 'react-google-login';
+import { useSelector, useDispatch } from 'react-redux'
+import {useNavigate} from "react-router-dom";
+
+import { LogInAction, LogOutActon, SetEmailAction } from "../actions";
 
 function Login(){
 
     var [userEmail, setUserEmail] = React.useState("");
     var [password, setPassword] = React.useState("");
+    var [authCode, setAuthCode] = React.useState("");
+
+    const dispatch = useDispatch();
+    let navigate = useNavigate();
 
     const sendLoginData = async() => {
-        var object = {userEmail, password};
+        var object = {userEmail, password, authCode};
 
-        await axios.post("/register", object);
+        console.log(object)
+
+        var reply = await axios.post("/login", object);
+
+        console.log(reply);
+
+        if(reply.data == "Login Successful"){
+            alert("Login Successfull");
+            dispatch(LogInAction());
+            dispatch(SetEmailAction(userEmail));
+            navigate("/");
+
+        }
+
     }
 
-    const OauthbuttonClicked = async(event) => {
-        event.preventDefault();
-        
-    await axios.get("/auth/google");
-    console.log("we are here");
-    }
-
-    sendLoginData();
 
     const responseSuccessGoogle = (response) => {
-        console.log(response);
+        var data = response.profileObj;
+        setAuthCode(data.googleId);
+        setUserEmail(data.email);
+        setPassword(null);
+        sendLoginData();
     }
 
     const responseFailGoogle = (response) => {
         console.log(response)
+    }
+
+    const LoginButton = (event) => {
+        event.preventDefault();
+        sendLoginData()
     }
 
     return (
@@ -40,7 +62,7 @@ function Login(){
                     <input type="email" onChange={(e) => setUserEmail(e.target.value)} /><br />
                     <label htmlFor="">Password</label><br />
                     <input type="password" onChange={(e) => setPassword(e.target.value)} /><br />
-                    <input type="submit" />
+                    <button type="submit" onClick = {LoginButton}>Submit</button>
                     <input type="reset" /><br />
                     <GoogleLogin
                         clientId="396893215612-v514renemo3tgeb85egqv0ltej6o7uip.apps.googleusercontent.com"

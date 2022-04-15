@@ -13,6 +13,17 @@ const LogInReducer = (state = false , action) => {
     }
 }
 
+const NameReducer = (state = null , action) => {
+    switch(action.type){
+        case "SetName" :
+            return action.payload;
+        case "RemoveName" :
+            return null;
+        default :
+            return state;
+    }
+}
+
 const EmailReducer = (state = null, action) => {
     switch(action.type){
         case "SetEmail" :
@@ -37,6 +48,7 @@ const PrivilageReducer = (state = null, action) => {
 
 
 const rootReducer = combineReducers({LoggedIn : LogInReducer,
+    Name : NameReducer,
      Email : EmailReducer,
       Privilage : PrivilageReducer})
 

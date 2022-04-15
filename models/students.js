@@ -25,6 +25,10 @@ const studentScheema = new mongoose.Schema({
     branch: {
         type: String,
         required: true
+    },
+    googleId: {
+        type : String,
+        required: false,
     }
 })
 
