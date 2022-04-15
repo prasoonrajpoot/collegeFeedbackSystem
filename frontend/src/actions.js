@@ -26,6 +26,20 @@ export const RemoveEmailAction = () => {
     })
 };
 
+export const SetNameAction = (name) => {
+    return ({
+        type : "SetName",
+        payload : name
+    })
+}
+
+
+export const RemoveNameAction = () => {
+    return ({
+        type : "RemoveName"
+    })
+};
+
 export const SetPrivalage = (privilage) => {
     return ({
         type : "SetPrivilage",

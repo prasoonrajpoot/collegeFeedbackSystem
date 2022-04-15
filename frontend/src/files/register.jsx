@@ -37,6 +37,9 @@ function Register(){
             dispatch(SetEmailAction(email));
             navigate("/");
         }
+        if(response.data == "Duplicate Account"){
+            alert("Duplicate Email address");
+        }
     }
 
     // const OauthbuttonClicked = async(event) => {
@@ -47,11 +50,12 @@ function Register(){
     // }
 
     const responseSuccessGoogle = (response) => {
-        console.log(response);
-        setName(response.Du.tf);
-        setEmail(response.Du.tv);
-        setAuthToken(response.accessToken);
-        setBranch(getBranchFromEmail(response.Du.tv))
+        // console.log(response.profileObj);
+        var data = response.profileObj;
+        setName(data.name);
+        setEmail(data.email);
+        setAuthToken(data.googleId);
+        setBranch(getBranchFromEmail(data.email))
     }
 
     const responseFailGoogle = (response) => {
@@ -69,6 +73,7 @@ function Register(){
                     <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value = {email} /><br />
                     <input type="number" placeholder="Semester" min="1" max="8" onChange={(e) => setSemester(e.target.value)} value = {semester}/>
                     <input type="text" placeholder="Section" onChange={(e) => setSection(e.target.value)} value = {section} /><br />
+                    <input type="text" placeholder="branch"  onChange={(e) => setBranch(e.target.value)} value = {branch} /><br />
                     <input type="password" placeholder="Password"  onChange={(e) => setPassword(e.target.value)} value = {password} /><br />
                     <button onClick = {sendRegisterData}>Submit</button>
                     <input type="reset" /><br />
@@ -78,6 +83,7 @@ function Register(){
                         onSuccess={responseSuccessGoogle}
                         onFailure={responseFailGoogle}
                         cookiePolicy={'single_host_origin'}
+                        // uxMode = "redirect"
                     /><br />
                     <span>Already have an account.<Link to="/login">Login Here</Link></span>
                 </form>
