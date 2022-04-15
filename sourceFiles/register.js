@@ -23,7 +23,7 @@ app.post("/", function(req, res){
     })
 
     try{
-        // console.log("reached here")
+         console.log(data)
         student.save()
     }
     catch(err){
