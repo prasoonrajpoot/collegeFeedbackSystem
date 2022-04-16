@@ -3,11 +3,19 @@
  padding: 0; 
  font-family: 'Inter';  
  font-style: normal;
+ background: #FCFCFC;   
 }
 
 h1 {
-    font-size: 30px;
     font-weight: 500;
+    font-size: 30px;
+    color: #393086;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 500;
+    color: #393086;
 }
 
 button {
@@ -28,12 +36,8 @@ button:active {
 .navbar {   
     display: flex;
     justify-content: center;
-    margin: 0;
     padding: 12px;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
+    margin-bottom: 25px;
     background: #FCFCFC;
     box-shadow: 0px 4px 4px rgba(57, 48, 134, 0.25);
     border-bottom: 1px solid #393086;
@@ -42,4 +46,20 @@ button:active {
 .navbar-element {
     float: right;
     margin: auto 100px;
+}
+
+.blue-box {
+    margin: auto;
+    background: #FCFCFC;
+    border: 1px solid #393086;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(57, 48, 134, 0.25);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+.form__field {
+    border: 0;
+    border-bottom: 2px solid #393086;
 }
