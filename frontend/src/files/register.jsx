@@ -12,7 +12,7 @@ function Register(){
     var [name , setName ] = React.useState("");
     var [email, setEmail] = React.useState("");
     var [password, setPassword] = React.useState("");
-    var [semester, setSemester] = React.useState(0);
+    var [semester, setSemester] = React.useState("");
     var [section, setSection] = React.useState("");
     var [auth_token, setAuthToken] = React.useState("");
     var [branch , setBranch ] = React.useState("");
@@ -66,17 +66,15 @@ function Register(){
 
     return (
         <div>
-            <div>
-                <h1>Register</h1>
+            <div class="blue-box" style={{width:460}}>
+                <h2>Register</h2>
                 <form action="">
-                    <input type="text" placeholder = "Name"  onChange = {(e) =>  setName(e.target.value)} value={name} /><br />
-                    <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value = {email} /><br />
-                    <input type="number" placeholder="Semester" min="1" max="8" onChange={(e) => setSemester(e.target.value)} value = {semester}/>
-                    <input type="text" placeholder="Section" onChange={(e) => setSection(e.target.value)} value = {section} /><br />
-                    <input type="text" placeholder="branch"  onChange={(e) => setBranch(e.target.value)} value = {branch} /><br />
-                    <input type="password" placeholder="Password"  onChange={(e) => setPassword(e.target.value)} value = {password} /><br />
+                    <input type="text" placeholder = "Name" class="form__field" onChange = {(e) =>  setName(e.target.value)} value={name} /><br />
+                    <input type="email" placeholder="Email" class="form__field" onChange={(e) => setEmail(e.target.value)} value = {email} /><br />
+                    <input type="number" placeholder="Semester" class="form__field" min="1" max="8" onChange={(e) => setSemester(e.target.value)} value = {semester}/>
+                    <input type="text" placeholder="Section" class="form__field" onChange={(e) => setSection(e.target.value)} value = {section} /><br />
+                    <input type="password" placeholder="Password" class="form__field" onChange={(e) => setPassword(e.target.value)} value = {password} /><br />
                     <button onClick = {sendRegisterData}>Submit</button>
-                    <input type="reset" /><br />
                     <GoogleLogin
                         clientId="396893215612-v514renemo3tgeb85egqv0ltej6o7uip.apps.googleusercontent.com"
                         buttonText="Login"
