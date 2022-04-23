@@ -30,7 +30,8 @@ function Login(){
             alert("Login Successfull");
             dispatch(LogInAction());
             dispatch(SetEmailAction(userEmail));
-            navigate("/");
+            navigate("/dashboard");
+            
 
         }
 
