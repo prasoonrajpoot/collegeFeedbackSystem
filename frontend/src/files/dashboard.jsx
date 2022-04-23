@@ -4,7 +4,7 @@ import axios from "axios";
 
 function Dashboard(){
     return (
-        <div>
+        <div class="blue-box">
             <div>
                 <h3>Deep Panchani</h3>
                 <h3>BT20CSE105</h3>
@@ -14,22 +14,7 @@ function Dashboard(){
                 <h3>Section B</h3>
             </div>
             <h1>Feedback Forms</h1>
-            <div>
-                <h3>4th Sem Feedback Form</h3>
-                <h4>Deadline: 18th May 2022</h4>
-                <button><span>Submit Feedback</span></button>
-            </div>
-            <div>
-                <h3>4th Sem Feedback Form</h3>
-                <h4>Deadline: 18th May 2022</h4>
-                <button><span>Submit Feedback</span></button>
-            </div>
-            <div>
-                <h3>4th Sem Feedback Form</h3>
-                <h4>Deadline: 18th May 2022</h4>
-                <button><span>Submit Feedback</span></button>
-            </div>
-            <div>
+            <div class="blue-box">
                 <h3>4th Sem Feedback Form</h3>
                 <h4>Deadline: 18th May 2022</h4>
                 <button><span>Submit Feedback</span></button>
