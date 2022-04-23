@@ -30,6 +30,7 @@ function Login(){
             dispatch(LogInAction());
             dispatch(SetEmailAction(userEmail));
             navigate("/dashboard");
+            
 
         }
 
