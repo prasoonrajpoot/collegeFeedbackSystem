@@ -53,23 +53,31 @@ function Login(){
         sendLoginData()
     }
 
+    const resetLoginField = () => {
+        setPassword("");
+        setUserEmail("");
+    };
+
     return (
         <div>
-            <div>
-                <h1>Login</h1>
+            <div class="blue-box" style={{width:460}}>
+                <h2>Login</h2>
                 <form action="">
-                    <label htmlFor="">Email</label><br />
-                    <input type="email" onChange={(e) => setUserEmail(e.target.value)} /><br />
-                    <label htmlFor="">Password</label><br />
-                    <input type="password" onChange={(e) => setPassword(e.target.value)} /><br />
+                    <input type="email" placeholder="Email" class="form__field" onChange={(e) => setUserEmail(e.target.value)} /><br />
+                    <input type="password" placeholder="Password" class="form__field" onChange={(e) => setPassword(e.target.value)} /><br />
                     <button type="submit" onClick = {LoginButton}>Submit</button>
-                    <input type="reset" /><br />
+                    <button type="reset" onClick={resetLoginField}>Cancel</button><br />
                     <GoogleLogin
                         clientId="396893215612-v514renemo3tgeb85egqv0ltej6o7uip.apps.googleusercontent.com"
                         buttonText="Login"
                         onSuccess={responseSuccessGoogle}
                         onFailure={responseFailGoogle}
                         cookiePolicy={'single_host_origin'}
+                        render={(renderProps) => (
+                        <button onClick={renderProps.onClick} style={{backgroundColor:"blue"}}>
+                            Login With Google
+                        </button>
+                        )}
                     /><br />
                     <span>Don't have an account.<Link to="/register">Register Here</Link></span>
                 </form>
