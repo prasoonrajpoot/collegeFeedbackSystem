@@ -13,6 +13,8 @@ import connectDB from "./sourceFiles/connectdb.js";
 import RegisterFile from "./sourceFiles/register.js";
 import LoginFile from "./sourceFiles/login.js";
 import AddTeacherFile from "./sourceFiles/addteacher.js"
+import AddSubjectFile from "./sourceFiles/addSubject.js";
+
 
 
 var app = express();
@@ -24,6 +26,7 @@ connectDB();
 app.use("/register", RegisterFile);
 app.use("/login", LoginFile);
 app.use("/addteacher", AddTeacherFile);
+app.use("/addsubject", AddSubjectFile);
 
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static("frontend/build"));  
