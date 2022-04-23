@@ -7,13 +7,23 @@ import axios from "axios";
 function AdminDashboard(){
 
     var [TeacherName, setTeacherName] = React.useState("")
+    var [SubjectName, setSubjectName] = React.useState("");
     
+    
+    const sendTeacherData = async() =>{
+        var object = {Name : TeacherName};
+        const response = await axios.post("/addteacher", object);
+        console.log("obje");
+        if(response.data == "succefully saved"){
+            alert("Teacher added");
+            setTeacherName("");
+        }
+    }
 
-
-    const AddTeacherPressed = async (event) => {
+    const AddTeacherPressed =(event) => {
+        console.log("we are here")
         event.preventDefault();
-        var obj = {Name : TeacherName};
-        axios.post("/addteacher", obj);
+        sendTeacherData();
     }
 
     return (
@@ -21,8 +31,11 @@ function AdminDashboard(){
             Add teacher
             <form action="">
                 <input type="text" placeholder = "Teacher's Name" value = {TeacherName} 
-                onChange = {(e) => setTeacherName(e.target.value) } onClick = {AddTeacherPressed}/>
-                <button >Add Teacher</button>   
+                onChange = {(e) => setTeacherName(e.target.value) } />
+                <button type = "submit" onClick = {AddTeacherPressed}>Add Teacher</button>   
+            </form>
+            <form action="">
+                
             </form>
         </div>
     )
