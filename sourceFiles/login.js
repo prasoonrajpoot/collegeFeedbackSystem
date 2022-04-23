@@ -24,7 +24,16 @@ app.post("/", function(req, res){
             else{
                 if(data.password == null){
                     if(result.googleId == data.authCode){
-                        res.send("Login Successful")
+                        console.log(result);
+                        var jsonObject = {
+                            name : result.name,
+                            email: result.email,
+                            semester: result.semester,
+                            section: result.section,
+                            branch: result.branch,
+                            code: "Login Successful"
+                        }
+                        res.json(jsonObject);
                     }
                     else{
                         // console.log(result.googleId);
