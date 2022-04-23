@@ -23,7 +23,7 @@ function DashboardLoggedIn(){
             semester : semester,
             branch : branch
         }
-        var response = await axios.post("/getformdata", obj )
+        var response = await axios.post("/getformdata", obj );
         console.log(response);
     }
 
