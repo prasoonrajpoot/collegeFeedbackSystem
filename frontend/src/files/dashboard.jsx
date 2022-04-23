@@ -6,12 +6,16 @@ import axios from "axios";
 // var [email, setEmail] = React.useState("")
 
 import { useSelector, useDispatch } from 'react-redux'
+import store from "../store";
 
 
 
 function DashboardLoggedIn(){
     var name = useSelector((state)=> state.Name );
     var Email = useSelector((state)=> state.Email);
+    var section = useSelector((store)=> store.Section);
+    var semester = useSelector((state) => store.Semester);
+    
     console.log("reached");
 
     return (
@@ -21,8 +25,8 @@ function DashboardLoggedIn(){
                 <h3>BT20CSE105</h3>
                 <h3>{Email}</h3>
                 <h3>2nd Year</h3>
-                <h3>4th Semester</h3>
-                <h3>Section B</h3>
+                <h3>{semester} Semester</h3>
+                <h3>Section {section}</h3>
             </div>
             <h1>Feedback Forms</h1>
             <div class="blue-box">
