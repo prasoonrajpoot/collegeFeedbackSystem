@@ -5,7 +5,7 @@ import GoogleLogin from 'react-google-login';
 import { useSelector, useDispatch } from 'react-redux'
 import {useNavigate} from "react-router-dom";
 
-import { LogInAction, LogOutActon, SetEmailAction } from "../actions";
+import { LogInAction, LogOutActon, SetEmailAction, SetNameAction, SetSectionAction, SetSemesterAction} from "../actions";
 
 function Login(){
 
@@ -25,11 +25,17 @@ function Login(){
 
         console.log(reply);
 
-        if(reply.data == "Login Successful"){
+        if(reply.data.code == "Login Successful"){
             alert("Login Successfull");
             dispatch(LogInAction());
-            dispatch(SetEmailAction(userEmail));
-            navigate("/");
+            dispatch(SetEmailAction(reply.data.email));
+            dispatch(SetNameAction(reply.data.name));
+            dispatch(SetSectionAction(reply.data.section));
+            dispatch((SetSemesterAction(reply.data.semester)));
+
+
+            navigate("/dashboard");
+
 
         }
 

@@ -46,11 +46,34 @@ const PrivilageReducer = (state = null, action) => {
     }
 }
 
+const SectionReducer = (state = null ,action) => {
+    switch(action.type){
+        case "SetSection":
+            return action.payload
+        case "RemoveSection":
+            return null;
+        default:
+            return state;
+    }
+}
+
+const SemesterReducer = (state = null , action) => {
+    switch(action.type){
+        case "SetSemester":
+            return action.payload;
+        case "RemoveSemester":
+            return null;
+        default:
+            return state;
+    }
+}
 
 const rootReducer = combineReducers({LoggedIn : LogInReducer,
     Name : NameReducer,
      Email : EmailReducer,
-      Privilage : PrivilageReducer})
+      Privilage : PrivilageReducer,
+    Semester : SemesterReducer,
+    Section : SectionReducer})
 
 const store = createStore(rootReducer);
 
