@@ -58,7 +58,7 @@ function DashboardLoggedIn(){
                 <div class="grid_container" style={{marginTop:25}}>
                     {forms.map((single) => <FormComp sem = {single.Semester} 
                     branch = {single.Branch} section = {single.Section}
-                    id = {single.id}/>)}
+                    id = {single.id} ques = {single.Ques}/>)}
                 </div>          
             </div>
         </div>

@@ -1,9 +1,13 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import {useLocation} from "react-router-dom";
 
 
 function Feedbackconfirmation(){
+    const location = useLocation()
+    var props = location.state;
+    console.log(props);
     return (
         <div class="blue-box" style={{width:700}}>
             <h2>Feedback Forms</h2>
