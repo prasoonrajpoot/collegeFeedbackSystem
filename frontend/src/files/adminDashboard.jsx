@@ -94,6 +94,8 @@ function AdminDashboard(){
                 onChange = {(e) => setSubjectName(e.target.value)}/>
                 <input type="text"  placeholder = "Enter Teacher For Subject" value = {SubjectTeacherName}
                 onChange = {(e) => setSubjectTeacherName(e.target.value)}/>
+                <br />
+                subjectName-semester-branch-setion
                 <button onClick = {subjectSavePressed}>Save Subject</button>
             </form>
             Float FeedBack Forms  For

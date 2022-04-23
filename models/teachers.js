@@ -9,7 +9,7 @@ const teachersScheema = mongoose.Schema({
     },
     
     subjects : {
-        type : [{type: mongoose.Schema.Types.ObjectId, ref : Subjects}],
+        type : [String],
         required : false
     },
     

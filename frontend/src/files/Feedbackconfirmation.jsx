@@ -4,26 +4,54 @@ import { Link } from "react-router-dom";
 
 import {useSelector} from "react-redux";
 
-function Feedbackconfirmation(){
-
-    var semester = useSelector((state) => state.Semster)
-    var Section = useSelector((state) => state.Section)
-    var email = useSelector((state) => state.Email);
-
-    
-
+function Subjects(props){
     return (
         <div class="blue-box" style={{width:700}}>
             <h2>Feedback Forms</h2>
             <div>
-                <span class="heading3">DAA </span>
-                <span class="heading3">Mr. Gaurav Malode</span>
+                <span class="heading3">{props.name} </span>
+                <span class="heading3">{props.teacher}</span>
                 <div>
                     <Link to="/feedbackForm">
                         <button class="form_button_blue">Fill Feedback Form</button>
                     </Link>
                 </div>
             </div>
+        </div>
+    )
+}
+
+function Feedbackconfirmation(){
+
+    var [nullVar, setNullVar] = React.useState("");
+
+    var [subject, setSubjects] = React.useState([""])
+
+
+
+    React.useEffect(()=> {
+
+        getSubjects();
+    }, [nullVar]);
+
+    var semester = useSelector((state) => state.Semester)
+    var Section = useSelector((state) => state.Section)
+    var email = useSelector((state) => state.Email);
+    var branch = email.slice(4,7);
+
+    const getSubjects = async() => {
+        var data = {semester, Section, branch};
+        console.log(data);  
+        var response = await axios.post("/getsubjects",data );
+        console.log(response);
+        setSubjects(response.data)
+    }
+
+    
+
+    return (
+        <div>
+            {subject.map(single => <Subjects name = {single.name} teacher = {single.teacher} />)}
         </div>
     )
 }

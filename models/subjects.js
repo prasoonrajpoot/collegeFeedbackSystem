@@ -24,7 +24,7 @@ const subjectScheema = mongoose.Schema({
 
     teacher : {
         required : true,
-        type: mongoose.Schema.Types.ObjectId
+        type: String
     },
 
     
