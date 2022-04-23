@@ -7,8 +7,15 @@ import axios from "axios";
 function AdminDashboard(){
 
     var [TeacherName, setTeacherName] = React.useState("")
+
     var [SubjectName, setSubjectName] = React.useState("");
     var [SubjectTeacherName, setSubjectTeacherName] = React.useState("");
+
+    var [formSemester, setFormSemester] = React.useState(0);
+    var [formSection, setFormSection] = React.useState("");
+    var [formBranch, setFormBranch] = React.useState("");
+
+
 
 
         
@@ -39,6 +46,7 @@ function AdminDashboard(){
 
     const subjectSavePressed = (event) => {
         event.preventDefault();
+        sendSubjectData();
 
     }
 
@@ -57,12 +65,17 @@ function AdminDashboard(){
                 onChange = {(e) => setTeacherName(e.target.value) } />
                 <button type = "submit" onClick = {AddTeacherPressed}>Add Teacher</button>   
             </form>
+            Add Subjects
             <form action="">
                 <input type="text" placeholder = "Enter Subject Name" value = {SubjectName}
                 onChange = {(e) => setSubjectName(e.target.value)}/>
                 <input type="text"  placeholder = "Enter Teacher For Subject" value = {SubjectTeacherName}
                 onChange = {(e) => setSubjectTeacherName(e.target.value)}/>
                 <button onClick = {subjectSavePressed}>Save Subject</button>
+            </form>
+            Float FeedBack Forms 
+            <form action="">
+                
             </form>
         </div>
     )
