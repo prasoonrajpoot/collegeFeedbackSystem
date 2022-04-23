@@ -2,7 +2,8 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-function FormComp(){
+function FormComp(props){
+    console.log("wer are dlkjfalkds ");
     return (
         <div class="blue-box" style={{width:410}}>
                         <div>

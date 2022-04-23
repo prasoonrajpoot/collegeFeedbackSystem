@@ -9,6 +9,8 @@ import FormComp from "./componenets/formComp.jsx";
 
 
 function DashboardLoggedIn(){
+    var [nullVar, setNullVar] = React.useState("");
+    var [forms, setForms] = React.useState([{}]);
     var name = useSelector((state)=> state.Name );
     var Email = useSelector((state)=> state.Email);
     var section = useSelector((store)=> store.Section);
@@ -17,7 +19,7 @@ function DashboardLoggedIn(){
     var branch = Email.slice(4,7);
 
     const getFormData = async () => {
-        console.log("we at form data");
+        // console.log("we at form data");
         var obj = {
             section : section,
             semester : semester,
@@ -25,11 +27,14 @@ function DashboardLoggedIn(){
         }
         var response = await axios.post("/getformdata", obj );
         console.log(response);
+        setForms(response.data.forms);
     }
 
     React.useEffect(()=>{
         getFormData()
-    })
+    }, [nullVar]);
+
+
     // console.log("semester " , semester);
     
     // console.log("reached");
@@ -51,13 +56,16 @@ function DashboardLoggedIn(){
             <div style={{width:846, marginTop:40, marginBottom:20, marginLeft:"auto", marginRight:"auto"}}>
                 <h2>Feedback Forms</h2>
                 <div class="grid_container" style={{marginTop:25}}>
-                    <FormComp />
-                    <FormComp />
+                    {forms.map((single) => <FormComp sem = {single.Semester} 
+                    branch = {single.Branch} section = {single.Section}/>)}
                 </div>          
             </div>
         </div>
     )
 }
+
+
+
 
 function Dashboard(){
     const isLoggedIn = useSelector((state) => state.LoggedIn);
