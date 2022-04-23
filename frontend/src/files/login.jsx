@@ -65,8 +65,8 @@ function Login(){
                 <form action="">
                     <input type="email" placeholder="Email" class="form__field" onChange={(e) => setUserEmail(e.target.value)} /><br />
                     <input type="password" placeholder="Password" class="form__field" onChange={(e) => setPassword(e.target.value)} /><br />
-                    <button type="submit" onClick = {LoginButton}>Submit</button>
-                    <button type="reset" onClick={resetLoginField}>Cancel</button><br />
+                    <button class="form_button_blue" type="submit" onClick = {LoginButton}>Submit</button>
+                    <button class="form_button_white" type="reset" onClick={resetLoginField}>Cancel</button><br />
                     <GoogleLogin
                         clientId="396893215612-v514renemo3tgeb85egqv0ltej6o7uip.apps.googleusercontent.com"
                         buttonText="Login"
@@ -74,7 +74,7 @@ function Login(){
                         onFailure={responseFailGoogle}
                         cookiePolicy={'single_host_origin'}
                         render={(renderProps) => (
-                        <button onClick={renderProps.onClick} style={{backgroundColor:"blue"}}>
+                        <button class="form_button_blue" onClick={renderProps.onClick} style={{backgroundColor:"blue"}}>
                             Login With Google
                         </button>
                         )}

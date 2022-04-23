@@ -81,7 +81,7 @@ function Register() {
   return (
     <div>
       <div class="blue-box" style={{ width: 460 }}>
-        <h2>Registration</h2>
+        <h2 style={{paddingBottom:10}}>Registration</h2>
         <form action="">
           <input
             type="text"
@@ -103,17 +103,16 @@ function Register() {
             type="number"
             placeholder="Semester"
             class="form__field"
-            min="1"
             max="8"
             onChange={(e) => setSemester(e.target.value)}
             value={semester}
-          />
+          /><br />
           <input type="text" placeholder="Section" class="form__field" onChange={(e) => setSection(e.target.value)} value={section} />
           <br />
           <input type="password" placeholder="Password" class="form__field" onChange={(e) => setPassword(e.target.value)} value={password}/>
           <br />
-          <button onClick={sendRegisterData}>Submit</button>
-          <button type="reset" onClick={resetInputField}>Cancel</button><br />
+          <button class="form_button_blue" onClick={sendRegisterData}>Submit</button>
+          <button class="form_button_white" type="reset" onClick={resetInputField}>Cancel</button><br />
           <GoogleLogin
             clientId="396893215612-v514renemo3tgeb85egqv0ltej6o7uip.apps.googleusercontent.com"
             buttonText="Login"
@@ -121,7 +120,7 @@ function Register() {
             onFailure={responseFailGoogle}
             cookiePolicy={"single_host_origin"}
             render={(renderProps) => (
-              <button onClick={renderProps.onClick} style={{backgroundColor:"blue"}}>
+              <button class="form_button_blue" onClick={renderProps.onClick} style={{backgroundColor:"blue"}}>
                 Resigter With Google
               </button>
             )}

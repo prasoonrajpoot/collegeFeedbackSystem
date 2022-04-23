@@ -18,9 +18,9 @@ h2 {
     color: #393086;
 }
 
-button {
+.form_button_blue {
     font-size: 21px;
-    padding: 3px 12px;
+    padding: 5px 20px;
     background: #393086;
     border-radius: 10px;
     font-weight: 500;
@@ -28,11 +28,35 @@ button {
     line-height: 25px;
     color: #FCFCFC;
     border: none;
+    margin: 10px 10px;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 10px rgba(57, 48, 134, 0.25);
 }
 
-button:active {
+.form_button_blue:active {
     background: #5246c2;
 }
+
+.form_button_white {
+    font-size: 21px;
+    padding: 5px 20px;
+    background: #FCFCFC;
+    border: 2px solid #393086;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 23px;  
+    line-height: 25px;
+    color: #393086;
+    margin: 10px 10px;
+}
+
+.form_button_white:active {
+    background: #5246c2;
+    color: #FCFCFC;
+    border: 2px solid #5246c2;
+}
+
 .navbar {   
     display: flex;
     justify-content: center;
@@ -64,5 +88,19 @@ button:active {
     border-bottom: 2px solid #393086;
     font-weight: 500;
     font-size: 20px;
+    color: rgba(57, 48, 134, 0.8);
+    margin: 10px 0px;
+
+}
+
+.form__field::placeholder {
+    color: rgba(57, 48, 134, 0.8);
+}
+
+.form__field.form__field:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(57, 48, 134, 0.8);
+}
+   
+.form__field::-ms-input-placeholder { /* Microsoft Edge */
     color: rgba(57, 48, 134, 0.8);
 }
