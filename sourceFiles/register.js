@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 
 
 app.post("/", function(req, res){
-    console.log("reachd here");
+    // console.log("reachd here");
     // console.log(req.body);
     var data = req.body;
     // var token = data.auth_token;
@@ -59,10 +59,8 @@ app.post("/", function(req, res){
                     res.send("succesfull");
                 }
                 catch(err){
-                    console.log("there wasa error saving usr");
+                    console.log("there was a error saving user");
                     console.log(err);
-                    res.send('fucked');
-            
                 }
             }
             else{

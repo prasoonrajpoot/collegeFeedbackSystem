@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 
 app.post("/", function(req,res){
-    console.log(req.body);
+    // console.log(req.body);
     var data = req.body
     
     Teachers.findOne({name: data.subjectTeacherName}, (err, result)=>{
@@ -24,10 +24,29 @@ app.post("/", function(req,res){
 
             }
             else{
-               
+                var subject_info=data.subjectName;
+                var i=0,j=0;
+                j=subject_info.indexOf("-",i);
+                var subject_branch=subject_info.slice(i,j);
+                i=j+1;
+                j=data.subjectName.indexOf("-",i);
+                console.log(i,j);
+                var subject_semester=parseInt(data.subjectName.slice(i,j));
+                i=j+1;
+                j=data.subjectName.indexOf("-",i);
+                var subject_name=data.subjectName.slice(i,j);
+                i=j+1;
+                j=data.subjectName.indexOf("-",i);
+                var subject_section=data.subjectName.slice(i);
+            
+                // console.log(subject_name,subject_branch,subject_section,subject_semester);
+                
                 var subject = new Subjects({
-                    name : data.subjectName,
-                    teacher : result.id
+                    name : subject_name,
+                    teacher : result.id,
+                    Branch : subject_branch,
+                    Section : subject_section,
+                    Semester : subject_semester
                 })
 
                 subject.save();
