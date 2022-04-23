@@ -15,24 +15,35 @@ function DashboardLoggedIn(){
     var Email = useSelector((state)=> state.Email);
     var section = useSelector((store)=> store.Section);
     var semester = useSelector((store) => store.Semester);
+    var year = parseInt(semester, 10);
+    console.log("semester " , semester);
     
     console.log("reached");
+    
 
     return (
-        <div class="blue-box">
-            <div>
-                <h3>{name}</h3>
-                <h3>BT20CSE105</h3>
-                <h3>{Email}</h3>
-                <h3>2nd Year</h3>
-                <h3>{semester} Semester</h3>
-                <h3>Section {section}</h3>
+        <div>
+            <div class="blue-box" style={{width:846, marginTop:40, marginBottom:20}}>
+                <span class="heading3">{name} </span>
+                <span class="heading3">{ Email.slice(0, 10).toUpperCase() } </span>
+                <span class="heading3">{Email} </span><br/>
+                <span class="heading3">Semester {semester} </span>
+                <span class="heading3">Year { year%2 === 0 ? year/2 : year/2 + 0.5 } </span>
+                <span class="heading3">Section {section.toUpperCase()}</span>
             </div>
-            <h1>Feedback Forms</h1>
-            <div class="blue-box">
-                <h3>4th Sem Feedback Form</h3>
-                <h4>Deadline: 18th May 2022</h4>
-                <button><span>Submit Feedback</span></button>
+            <div style={{width:846, marginTop:40, marginBottom:20, marginLeft:"auto", marginRight:"auto"}}>
+                <h2>Feedback Forms</h2>
+                <div class="grid_container" style={{marginTop:25}}>
+                    <div class="blue-box" style={{width:410}}>
+                        <div>
+                            <h3>4th Sem Feedback Form </h3> 
+                            <h4>Deadline: 18th May 2022</h4>
+                        </div>
+                        <div>
+                            <button class="form_button_blue">Submit Feedback</button>
+                        </div>
+                    </div>
+                </div>          
             </div>
         </div>
     )

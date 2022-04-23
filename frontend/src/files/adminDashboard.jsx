@@ -8,8 +8,10 @@ function AdminDashboard(){
 
     var [TeacherName, setTeacherName] = React.useState("")
     var [SubjectName, setSubjectName] = React.useState("");
-    
-    
+    var [SubjectTeacherName, setSubjectTeacherName] = React.useState("");
+
+
+        
     const sendTeacherData = async() =>{
         var object = {Name : TeacherName};
         const response = await axios.post("/addteacher", object);
@@ -21,13 +23,34 @@ function AdminDashboard(){
     }
 
     const AddTeacherPressed =(event) => {
-        console.log("we are here")
         event.preventDefault();
         sendTeacherData();
     }
 
+    const sendSubjectData = async() => {
+        var obj = {
+            subjectName : SubjectName,
+            subjectTeacherName : SubjectTeacherName
+        }
+
+        var reply = await axios.post("/addsubject", obj);
+        console.log(reply);
+    }
+
+    const subjectSavePressed = (event) => {
+        event.preventDefault();
+
+    }
+
     return (
         <div class="blue-box">
+        <h1>Feedback Forms</h1>
+            <div class="blue-box">
+                <h3>4th Sem Feedback Form</h3>
+                <h4>Deadline: 18th May 2022</h4>
+                <button class="form_button_blue">View Responses</button>
+            </div>
+
             Add teacher
             <form action="">
                 <input type="text" placeholder = "Teacher's Name" value = {TeacherName} 
@@ -35,7 +58,11 @@ function AdminDashboard(){
                 <button type = "submit" onClick = {AddTeacherPressed}>Add Teacher</button>   
             </form>
             <form action="">
-                
+                <input type="text" placeholder = "Enter Subject Name" value = {SubjectName}
+                onChange = {(e) => setSubjectName(e.target.value)}/>
+                <input type="text"  placeholder = "Enter Teacher For Subject" value = {SubjectTeacherName}
+                onChange = {(e) => setSubjectTeacherName(e.target.value)}/>
+                <button onClick = {subjectSavePressed}>Save Subject</button>
             </form>
         </div>
     )
