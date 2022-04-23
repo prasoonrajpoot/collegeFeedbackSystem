@@ -15,18 +15,22 @@ function DashboardLoggedIn(){
     var Email = useSelector((state)=> state.Email);
     var section = useSelector((store)=> store.Section);
     var semester = useSelector((store) => store.Semester);
+    var year = parseInt(semester, 10);
+    console.log("semester " , semester);
     
     console.log("reached");
+    
 
     return (
         <div class="blue-box">
             <div>
                 <h3>{name}</h3>
-                <h3>BT20CSE105</h3>
+                <h3>{ Email.slice(0, 10).toUpperCase() }</h3>
                 <h3>{Email}</h3>
-                <h3>2nd Year</h3>
-                <h3>{semester} Semester</h3>
-                <h3>Section {section}</h3>
+                <h3> Semester : {semester}</h3>
+                <h3> Year : { year%2 === 0 ? year/2 : year/2 + 0.5 }  </h3>
+            
+                <h3>Section {section.toUpperCase()}</h3>
             </div>
             <h1>Feedback Forms</h1>
             <div class="blue-box">

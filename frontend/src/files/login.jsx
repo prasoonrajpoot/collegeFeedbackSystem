@@ -7,6 +7,7 @@ import {useNavigate} from "react-router-dom";
 
 import { LogInAction, LogOutActon, SetEmailAction, SetNameAction, SetSectionAction, SetSemesterAction} from "../actions";
 
+
 function Login(){
 
     var [userEmail, setUserEmail] = React.useState("");
