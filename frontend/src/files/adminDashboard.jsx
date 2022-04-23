@@ -4,13 +4,13 @@ import axios from "axios";
 
 
 
-function adminDashboard(){
+function AdminDashboard(){
 
     var [TeacherName, setTeacherName] = React.useState("")
     
 
 
-    AddTeacherPressed = async (event) => {
+    const AddTeacherPressed = async (event) => {
         event.preventDefault();
         var obj = {Name : TeacherName};
         axios.post("/addteacher", obj);
@@ -21,13 +21,13 @@ function adminDashboard(){
             Add teacher
             <form action="">
                 <input type="text" placeholder = "Teacher's Name" value = {TeacherName} 
-                onChange = {(e) => setTeacherName(e.target.value)}/>
-                <button >Add Teacher</button>
+                onChange = {(e) => setTeacherName(e.target.value) } onClick = {AddTeacherPressed}/>
+                <button >Add Teacher</button>   
             </form>
         </div>
     )
 }
 
-export default adminDashboard;
+export default AdminDashboard;
 
 
