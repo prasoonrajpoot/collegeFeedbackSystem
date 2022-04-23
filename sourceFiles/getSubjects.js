@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 
 app.post("/", (req,res)=>{
     var data = req.body;
-    console.log(data);
+    // console.log(data);
 })
 
 

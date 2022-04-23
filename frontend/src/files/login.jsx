@@ -7,7 +7,6 @@ import {useNavigate} from "react-router-dom";
 
 import { LogInAction, LogOutActon, SetEmailAction, SetNameAction, SetSectionAction, SetSemesterAction} from "../actions";
 
-
 function Login(){
 
     var [userEmail, setUserEmail] = React.useState("");
@@ -27,7 +26,7 @@ function Login(){
         console.log(reply.data);
 
         if(reply.data.code == "Login Successful"){
-            console.log("we are helkjfdlakd");
+            console.log("asdkjfdh");
             alert("Login Successfull");
             dispatch(LogInAction());
             dispatch(SetEmailAction(reply.data.email));
