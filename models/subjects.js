@@ -11,7 +11,7 @@ const subjectScheema = mongoose.Schema({
 
     teacher : {
         required : true,
-        type: mongoose.Schema.Types.ObjectId, ref: Teachers
+        type: mongoose.Schema.Types.ObjectId
     },
 
     
@@ -19,3 +19,5 @@ const subjectScheema = mongoose.Schema({
 })
 
 const Subjects = mongoose.model("Subject", subjectScheema);
+
+export default Subjects;
