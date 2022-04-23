@@ -1,4 +1,106 @@
 *{
  margin: 0;
- padding: 0;   
+ padding: 0; 
+ font-family: 'Inter';  
+ font-style: normal;
+ background: #FCFCFC;   
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 30px;
+    color: #393086;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 26px;
+    color: #393086;
+}
+
+.form_button_blue {
+    font-size: 21px;
+    padding: 5px 20px;
+    background: #393086;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 23px;  
+    line-height: 25px;
+    color: #FCFCFC;
+    border: none;
+    margin: 10px 10px;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 10px rgba(57, 48, 134, 0.25);
+}
+
+.form_button_blue:active {
+    background: #5246c2;
+}
+
+.form_button_white {
+    font-size: 21px;
+    padding: 5px 20px;
+    background: #FCFCFC;
+    border: 2px solid #393086;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 23px;  
+    line-height: 25px;
+    color: #393086;
+    margin: 10px 10px;
+}
+
+.form_button_white:active {
+    background: #5246c2;
+    color: #FCFCFC;
+    border: 2px solid #5246c2;
+}
+
+.navbar {   
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    margin-bottom: 25px;
+    background: #FCFCFC;
+    box-shadow: 0px 4px 4px rgba(57, 48, 134, 0.25);
+    border-bottom: 1px solid #393086;
+}
+
+.navbar-element {
+    float: right;
+    margin: auto 100px;
+}
+
+.blue-box {
+    margin: auto;
+    background: #FCFCFC;
+    border: 1px solid #393086;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(57, 48, 134, 0.25);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+.form__field {
+    border: 0;
+    border-bottom: 2px solid #393086;
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(57, 48, 134, 0.8);
+    margin: 10px 0px;
+
+}
+
+.form__field::placeholder {
+    color: rgba(57, 48, 134, 0.8);
+}
+
+.form__field.form__field:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(57, 48, 134, 0.8);
+}
+   
+.form__field::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(57, 48, 134, 0.8);
 }
