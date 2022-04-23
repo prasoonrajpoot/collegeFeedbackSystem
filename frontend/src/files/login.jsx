@@ -53,6 +53,11 @@ function Login(){
         sendLoginData()
     }
 
+    const resetLoginField = () => {
+        setPassword("");
+        setUserEmail("");
+    };
+
     return (
         <div>
             <div class="blue-box" style={{width:460}}>
@@ -61,12 +66,18 @@ function Login(){
                     <input type="email" placeholder="Email" class="form__field" onChange={(e) => setUserEmail(e.target.value)} /><br />
                     <input type="password" placeholder="Password" class="form__field" onChange={(e) => setPassword(e.target.value)} /><br />
                     <button type="submit" onClick = {LoginButton}>Submit</button>
+                    <button type="reset" onClick={resetLoginField}>Cancel</button><br />
                     <GoogleLogin
                         clientId="396893215612-v514renemo3tgeb85egqv0ltej6o7uip.apps.googleusercontent.com"
                         buttonText="Login"
                         onSuccess={responseSuccessGoogle}
                         onFailure={responseFailGoogle}
                         cookiePolicy={'single_host_origin'}
+                        render={(renderProps) => (
+                        <button onClick={renderProps.onClick} style={{backgroundColor:"blue"}}>
+                            Login With Google
+                        </button>
+                        )}
                     /><br />
                     <span>Don't have an account.<Link to="/register">Register Here</Link></span>
                 </form>
