@@ -24,7 +24,7 @@ app.post("/", function(req, res){
             else{
                 if(data.password == null){
                     if(result.googleId == data.authCode){
-                        console.log(result);
+                        // console.log(result);
                         var jsonObject = {
                             name : result.name,
                             email: result.email,
