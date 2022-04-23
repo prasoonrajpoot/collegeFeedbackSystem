@@ -7,7 +7,7 @@ function FormComp(props){
     return (
         <div class="blue-box" style={{width:410}}>
                         <div>
-                            <h3>4th Sem Feedback Form </h3> 
+                            <h3>{props.sem}th Sem Feedback Form </h3> 
                             <h4>Deadline: 18th May 2022</h4>
                         </div>
                         <div>
