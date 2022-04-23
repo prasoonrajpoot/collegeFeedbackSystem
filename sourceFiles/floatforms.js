@@ -15,7 +15,7 @@ app.post("/", (req,res)=>{
     var data = req.body;
 
     const Form = new Forms({
-        Branch: data.branch,
+        Branch: data.branch.toLowerCase(),
         Section : data.section,
         Semester : data.semester
     });

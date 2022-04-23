@@ -29,7 +29,7 @@ app.use("/login", LoginFile);
 app.use("/addteacher", AddTeacherFile);
 app.use("/addsubject", AddSubjectFile);
 app.use("/floatforms", AddFlotFormsFile);
-app.use("getformdata", GetFormDataFile);
+app.use("/getformdata", GetFormDataFile);
 
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static("frontend/build"));  

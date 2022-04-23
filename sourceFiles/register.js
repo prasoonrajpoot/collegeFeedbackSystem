@@ -41,7 +41,7 @@ app.post("/", function(req, res){
         password: data.password,
         semester: parseInt(data.semester),
         section : data.section,
-        branch: data.branch,
+        branch: data.branch.toLowerCase(),
         googleId: data.auth_token,
     })
 
