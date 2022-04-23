@@ -153,21 +153,17 @@ h4 {
 }
 
 .star-cb-group {
-    /* remove inline-block whitespace */
     font-size: 0;
-    /* flip the order so we can use the + and ~ combinators */
     unicode-bidi: bidi-override;
     direction: rtl;
-    /* the hidden clearer */
   }
-  .star-cb-group * {
+.star-cb-group * {
     font-size: 1rem;
-  }
-  .star-cb-group > input {
+}
+.star-cb-group > input {
     display: none;
-  }
-  .star-cb-group > input + label {
-    /* only enough room for the star */
+}
+.star-cb-group > input + label {
     display: inline-block;
     overflow: hidden;
     text-indent: 9999px;
@@ -175,33 +171,33 @@ h4 {
     white-space: nowrap;
     cursor: pointer;
     font-size:40px;
-  }
-  .star-cb-group > input + label:before {
+}
+.star-cb-group > input + label:before {
     display: inline-block;
     text-indent: -9999px;
     content: "☆";
-    color: #888;
-  }
-  .star-cb-group > input:checked ~ label:before, .star-cb-group > input + label:hover ~ label:before, .star-cb-group > input + label:hover:before {
+    color: #393086;
+}
+.star-cb-group > input:checked ~ label:before, .star-cb-group > input + label:hover ~ label:before, .star-cb-group > input + label:hover:before {
     content: "★";
-    color: #e52;
-    text-shadow: 0 0 1px #333;
-  }
-  .star-cb-group > .star-cb-clear + label {
+    color: #393086;
+    text-shadow: 0 0 1px #393086;
+}
+.star-cb-group > .star-cb-clear + label {
     text-indent: -9999px;
     width: .5em;
     margin-left: -.5em;
-  }
-  .star-cb-group > .star-cb-clear + label:before {
+}
+.star-cb-group > .star-cb-clear + label:before {
     width: .5em;
-  }
-  .star-cb-group:hover > input + label:before {
+}
+.star-cb-group:hover > input + label:before {
     content: "☆";
-    color: #888;
+    color: #393086;
     text-shadow: none;
-  }
-  .star-cb-group:hover > input + label:hover ~ label:before, .star-cb-group:hover > input + label:hover:before {
+}
+.star-cb-group:hover > input + label:hover ~ label:before, .star-cb-group:hover > input + label:hover:before {
     content: "★";
-    color: #e52;
+    color: #393086;
     text-shadow: 0 0 1px #333;
-  }
+}

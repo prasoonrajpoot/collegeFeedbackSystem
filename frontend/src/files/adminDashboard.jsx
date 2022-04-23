@@ -22,7 +22,6 @@ function AdminDashboard(){
     const sendTeacherData = async() =>{
         var object = {Name : TeacherName};
         const response = await axios.post("/addteacher", object);
-        console.log("obje");
         if(response.data == "succefully saved"){
             alert("Teacher added");
             setTeacherName("");
@@ -41,7 +40,7 @@ function AdminDashboard(){
         }
 
         var reply = await axios.post("/addsubject", obj);
-        console.log(reply);
+        // console.log(reply);
     }
 
     const sendFloatFeedbackFormsData = async() => {
@@ -53,7 +52,7 @@ function AdminDashboard(){
 
         var response = await axios.post("/floatforms", object)
 
-        console.log(response);
+        // console.log(response);
 
         if(response.data == "Form Saved"){
             alert("Form Sent SuccesFully");
@@ -74,12 +73,19 @@ function AdminDashboard(){
     }
 
     return (
-        <div class="blue-box">
-        <h1>Feedback Forms</h1>
+        <div style={{width:864, margin:"auto", padding:"auto"}}>
+            
             <div class="blue-box">
-                <h3>4th Sem Feedback Form</h3>
-                <h4>Deadline: 18th May 2022</h4>
-                <button class="form_button_blue">View Responses</button>
+                <h1>Feedback Forms</h1>
+                <div class="blue-box grid_container" style={{width:671, height:148, margin:"auto", padding:0,  marginTop:15,marginBottom:15}}>
+                    <div style={{margin:"auto", padding:"auto"}}>
+                        <h3>4th Sem Feedback Form</h3>
+                        <h4>Deadline: 18th May 2022</h4>
+                    </div>
+                    <div style={{margin:"auto", padding:"auto"}}>
+                        <button class="form_button_blue">View Responses</button>
+                    </div>
+                </div>
             </div>
 
             Add teacher

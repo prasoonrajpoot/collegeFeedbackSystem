@@ -70,9 +70,9 @@ function DashboardLoggedIn(){
 
 function Dashboard(){
     const isLoggedIn = useSelector((state) => state.LoggedIn);
-    console.log(isLoggedIn);
+    // console.log(isLoggedIn);
     if(isLoggedIn){
-        console.log("here");
+        // console.log("here");
         return DashboardLoggedIn();
     }
     else{
