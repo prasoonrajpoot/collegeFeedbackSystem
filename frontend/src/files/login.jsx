@@ -24,7 +24,7 @@ function Login(){
 
         var reply = await axios.post("/login", object);
 
-        console.log(reply);
+        console.log(reply.data);
 
         if(reply.data.code == "Login Successful"){
             alert("Login Successfull");
