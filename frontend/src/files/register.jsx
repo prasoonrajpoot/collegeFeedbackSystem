@@ -33,7 +33,7 @@ function Register() {
       section,
       branch,
     };
-    console.log(object);
+    // console.log(object);
 
     var response = await axios.post("/register", object);
     if (response.data == "succesfull") {

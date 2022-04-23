@@ -7,7 +7,6 @@ import {useNavigate} from "react-router-dom";
 
 import { LogInAction, LogOutActon, SetEmailAction, SetNameAction, SetSectionAction, SetSemesterAction} from "../actions";
 
-
 function Login(){
 
     var [userEmail, setUserEmail] = React.useState("");
@@ -20,14 +19,14 @@ function Login(){
     const sendLoginData = async() => {
         var object = {userEmail, password, authCode};
 
-        console.log(object)
+        // console.log(object)
 
         var reply = await axios.post("/login", object);
 
-        console.log(reply.data);
+        // console.log(reply.data);
 
         if(reply.data.code == "Login Successful"){
-            console.log("we are helkjfdlakd");
+            // console.log("asdkjfdh");
             alert("Login Successfull");
             dispatch(LogInAction());
             dispatch(SetEmailAction(reply.data.email));
@@ -53,7 +52,7 @@ function Login(){
     }
 
     const responseFailGoogle = (response) => {
-        console.log(response)
+        // console.log(response)
     }
 
     const LoginButton = (event) => {

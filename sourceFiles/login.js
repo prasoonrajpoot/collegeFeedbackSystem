@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 app.post("/", function(req, res){
     var data = req.body;
-    console.log(data);
+    // console.log(data);
 
     Students.findOne({email : data.userEmail}, function(err, result){
         if(err){
@@ -24,7 +24,7 @@ app.post("/", function(req, res){
             else{
                 if(data.password == null){
                     if(result.googleId == data.authCode){
-                        console.log(result);
+                        // console.log(result);
                         var jsonObject = {
                             name : result.name,
                             email: result.email,
@@ -38,7 +38,7 @@ app.post("/", function(req, res){
                     else{
                         // console.log(result.googleId);
                         // console.log(data.)
-                        console.log("we here")
+                        // console.log("we here")
                         res.send("invalid login");
                     }
                 }

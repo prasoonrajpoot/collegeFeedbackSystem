@@ -22,7 +22,6 @@ function AdminDashboard(){
     const sendTeacherData = async() =>{
         var object = {Name : TeacherName};
         const response = await axios.post("/addteacher", object);
-        console.log("obje");
         if(response.data == "succefully saved"){
             alert("Teacher added");
             setTeacherName("");
@@ -41,7 +40,7 @@ function AdminDashboard(){
         }
 
         var reply = await axios.post("/addsubject", obj);
-        console.log(reply);
+        // console.log(reply);
     }
 
     const sendFloatFeedbackFormsData = async() => {
@@ -53,7 +52,7 @@ function AdminDashboard(){
 
         var response = await axios.post("/floatforms", object)
 
-        console.log(response);
+        // console.log(response);
 
         if(response.data == "Form Saved"){
             alert("Form Sent SuccesFully");

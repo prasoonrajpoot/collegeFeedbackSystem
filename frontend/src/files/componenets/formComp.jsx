@@ -3,19 +3,31 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function FormComp(props){
-    console.log("wer are dlkjfalkds ");
+    var branch = props.branch;
+    var section = props.section;
+    var semester = props.sem;
+    var questions = props.ques;
+
+    var obj = {
+        branch, section, semester, questions
+    }
+
+    console.log(obj);
+    
     return (
         <div class="blue-box" style={{width:410}}>
-                        <div>
-                            <h3>{props.sem}th Sem Feedback Form </h3> 
-                            <h4>Deadline: 18th May 2022</h4>
-                        </div>
-                        <div>
-                            <Link to="/Feedbackconfirmation">
-                                <button class="form_button_blue">Submit Feedback</button>
-                            </Link>    
-                        </div>
-                    </div>
+            <div>
+                <h3>{props.sem}th Sem Feedback Form </h3> 
+                <h4>Deadline: 18th May 2022</h4>
+            </div>
+            <div>
+                <Link to= {{
+                    pathname: "/Feedbackconfirmation",
+                }} >
+                    <button class="form_button_blue">Submit Feedback</button>
+                </Link>    
+            </div>
+        </div>
     )
 }
 
