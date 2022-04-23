@@ -26,6 +26,7 @@ function Login(){
         console.log(reply.data);
 
         if(reply.data.code == "Login Successful"){
+            console.log("we are helkjfdlakd");
             alert("Login Successfull");
             dispatch(LogInAction());
             dispatch(SetEmailAction(reply.data.email));
