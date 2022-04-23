@@ -8,6 +8,7 @@ import Register from "./files/register.jsx";
 import Dashboard from "./files/dashboard.jsx";
 import Teachersdashboard from "./files/teachersDashboard.jsx";
 import Admindashboard from "./files/adminDashboard.jsx";
+import Feedbackconfirmation from "./files/Feedbackconfirmation.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path = "/dashboard" element = {<Dashboard />}/>
         <Route path = "/teachersDashboard" element = {<Teachersdashboard />} />
         <Route path = "/adminDashboard" element = {<Admindashboard />} />
+        <Route path = "/Feedbackconfirmation" element = {<Feedbackconfirmation />} />
       </Routes> 
     </Router>
   )
