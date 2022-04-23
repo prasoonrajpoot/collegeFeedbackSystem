@@ -6,7 +6,6 @@ import axios from "axios";
 // var [email, setEmail] = React.useState("")
 
 import { useSelector, useDispatch } from 'react-redux'
-import store from "../store";
 
 
 
@@ -16,9 +15,26 @@ function DashboardLoggedIn(){
     var section = useSelector((store)=> store.Section);
     var semester = useSelector((store) => store.Semester);
     var year = parseInt(semester, 10);
-    console.log("semester " , semester);
+    var branch = Email.slice(4,7);
+
+    const getFormData = async () => {
+        var obj = {
+            section : section,
+            semester : semester,
+            branch : branch
+        }
+        var response = await axios.post("/getformdata", obj )
+        console.log(response);
+    }
+
+    React.useEffect(()=>{
+        getFormData()
+    })
+    // console.log("semester " , semester);
     
-    console.log("reached");
+    // console.log("reached");
+
+
     
 
     return (
@@ -31,6 +47,7 @@ function DashboardLoggedIn(){
                 <span class="heading3">Year { year%2 === 0 ? year/2 : year/2 + 0.5 } </span>
                 <span class="heading3">Section {section.toUpperCase()}</span>
             </div>
+
             <div style={{width:846, marginTop:40, marginBottom:20, marginLeft:"auto", marginRight:"auto"}}>
                 <h2>Feedback Forms</h2>
                 <div class="grid_container" style={{marginTop:25}}>

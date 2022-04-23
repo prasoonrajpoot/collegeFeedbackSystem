@@ -54,6 +54,13 @@ function AdminDashboard(){
         var response = await axios.post("/floatforms", object)
 
         console.log(response);
+
+        if(response.data == "Form Saved"){
+            alert("Form Sent SuccesFully");
+            setFormBranch("");
+            setFormSection("");
+            setFormSemester(0);
+        }
     }
     const subjectSavePressed = (event) => {
         event.preventDefault();
