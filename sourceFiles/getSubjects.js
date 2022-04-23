@@ -10,8 +10,7 @@ app.use(bodyParser.json());
 
 app.post("/", (req,res)=>{
     var data = req.body;
-    console.log(data);
-    // Subjects.find({})
+    // console.log(data);
 })
 
 

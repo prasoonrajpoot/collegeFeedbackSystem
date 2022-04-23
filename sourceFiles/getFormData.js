@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.post("/", (req,res)=>{
     // console.log("we are here");
     var data = req.body
-    console.log(req.body);
+    // console.log(req.body);
 
     Forms.find({Branch : data.branch.toLowerCase(), Semester : parseInt(data.semester), Section: data.section},
         (err, result)=>{
@@ -20,7 +20,7 @@ app.post("/", (req,res)=>{
                 throw err;
             }
             else{
-                console.log(result);
+                // console.log(result);
                 if(result == null){
                     res.send({code : "NO FORMS"});
                 }
