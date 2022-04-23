@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 
+import Forms from "../models/form.js";
 
 var app = express();
 
