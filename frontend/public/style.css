@@ -13,8 +13,8 @@ h1 {
 }
 
 h2 {
-    font-size: 26px;
     font-weight: 500;
+    font-size: 26px;
     color: #393086;
 }
 
@@ -22,9 +22,9 @@ button {
     font-size: 21px;
     padding: 3px 12px;
     background: #393086;
-    border-radius: 50px;
+    border-radius: 10px;
     font-weight: 500;
-    font-size: 21px;    
+    font-size: 23px;  
     line-height: 25px;
     color: #FCFCFC;
     border: none;
@@ -62,4 +62,7 @@ button:active {
 .form__field {
     border: 0;
     border-bottom: 2px solid #393086;
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(57, 48, 134, 0.8);
 }
