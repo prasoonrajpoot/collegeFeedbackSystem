@@ -40,7 +40,7 @@ function Register() {
       alert("registeration sucessfull");
       dispatch(LogInAction());
       dispatch(SetEmailAction(email));
-      navigate("/");
+      navigate("/login");
     }
     if (response.data == "Duplicate Account") {
       alert("Duplicate Email address");

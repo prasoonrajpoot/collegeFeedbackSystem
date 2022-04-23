@@ -17,6 +17,7 @@ function DashboardLoggedIn(){
     var semester = useSelector((store) => store.Semester);
     var year = parseInt(semester, 10);
     console.log("semester " , semester);
+    
     console.log("reached");
     
 
