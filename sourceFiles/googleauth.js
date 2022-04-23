@@ -31,13 +31,13 @@ passport.use(new GoogleStrategy({
 
 
 app.get("/", function(req,res){
-    console.log("something in get google auth backend");
+    // console.log("something in get google auth backend");
     passport.authenticate("google", {scope: ["profile"]});
 
 })
 
 app.post("/", function(req,res){
-    console.log("something in post google auth backend");
+    // console.log("something in post google auth backend");
 })
 
 

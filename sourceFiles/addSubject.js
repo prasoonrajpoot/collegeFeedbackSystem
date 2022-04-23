@@ -30,7 +30,6 @@ app.post("/", function(req,res){
                 var subject_branch=subject_info.slice(i,j);
                 i=j+1;
                 j=data.subjectName.indexOf("-",i);
-                console.log(i,j);
                 var subject_semester=parseInt(data.subjectName.slice(i,j));
                 i=j+1;
                 j=data.subjectName.indexOf("-",i);
