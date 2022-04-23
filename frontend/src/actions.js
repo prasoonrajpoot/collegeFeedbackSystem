@@ -52,3 +52,18 @@ export const RemovePrivilage = () => {
         type : "RemovePrivilage"
     })
 };
+
+
+export const SetSemesterAction = (semester) => {
+    return ({
+        type : "SetSemester",
+        payload : semester
+    })
+}
+
+export const SetSectionAction = (section) => {
+    return ({
+        type : "SetSection",
+        payload: section
+    })
+}
