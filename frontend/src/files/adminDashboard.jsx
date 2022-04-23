@@ -74,19 +74,6 @@ function AdminDashboard(){
 
     return (
         <div style={{width:864, margin:"auto", padding:"auto"}}>
-            
-            <div class="blue-box">
-                <h1>Feedback Forms</h1>
-                <div class="blue-box grid_container" style={{width:671, height:148, margin:"auto", padding:0,  marginTop:15,marginBottom:15}}>
-                    <div style={{margin:"auto", padding:"auto"}}>
-                        <h3>4th Sem Feedback Form</h3>
-                        <h4>Deadline: 18th May 2022</h4>
-                    </div>
-                    <div style={{margin:"auto", padding:"auto"}}>
-                        <button class="form_button_blue">View Responses</button>
-                    </div>
-                </div>
-            </div>
 
             Add teacher
             <form action="">
