@@ -14,7 +14,7 @@ import RegisterFile from "./sourceFiles/register.js";
 import LoginFile from "./sourceFiles/login.js";
 import AddTeacherFile from "./sourceFiles/addteacher.js"
 import AddSubjectFile from "./sourceFiles/addSubject.js";
-
+import AddFlotFormsFile from "./sourceFiles/floatforms.js";
 
 
 var app = express();
@@ -27,6 +27,7 @@ app.use("/register", RegisterFile);
 app.use("/login", LoginFile);
 app.use("/addteacher", AddTeacherFile);
 app.use("/addsubject", AddSubjectFile);
+app.use("/floatforms", AddFlotFormsFile);
 
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static("frontend/build"));  
