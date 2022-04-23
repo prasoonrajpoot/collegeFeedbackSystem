@@ -1,13 +1,17 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import {useLocation} from "react-router-dom";
 
+import {useSelector} from "react-redux";
 
 function Feedbackconfirmation(){
-    const location = useLocation()
-    var props = location.state;
-    console.log(props);
+
+    var semester = useSelector((state) => state.Semster)
+    var Section = useSelector((state) => state.Section)
+    var email = useSelector((state) => state.Email);
+
+    
+
     return (
         <div class="blue-box" style={{width:700}}>
             <h2>Feedback Forms</h2>
