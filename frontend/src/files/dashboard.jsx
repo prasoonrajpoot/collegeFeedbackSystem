@@ -1,13 +1,11 @@
 import React from "react";
 import axios from "axios";
 
-
-// var [Name, setName] = React.useState("");
-// var [email, setEmail] = React.useState("")
-
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from "react-router-dom";
 
+
+
+import FormComp from "./componenets/formComp.jsx";
 
 
 function DashboardLoggedIn(){
@@ -19,6 +17,7 @@ function DashboardLoggedIn(){
     var branch = Email.slice(4,7);
 
     const getFormData = async () => {
+        console.log("we at form data");
         var obj = {
             section : section,
             semester : semester,
@@ -52,28 +51,8 @@ function DashboardLoggedIn(){
             <div style={{width:846, marginTop:40, marginBottom:20, marginLeft:"auto", marginRight:"auto"}}>
                 <h2>Feedback Forms</h2>
                 <div class="grid_container" style={{marginTop:25}}>
-                    <div class="blue-box" style={{width:410}}>
-                        <div>
-                            <h3>4th Sem Feedback Form </h3> 
-                            <h4>Deadline: 18th May 2022</h4>
-                        </div>
-                        <div>
-                            <Link to="/Feedbackconfirmation">
-                                <button class="form_button_blue">Submit Feedback</button>
-                            </Link>
-                        </div>
-                    </div>
-                    <div class="blue-box" style={{width:410}}>
-                        <div>
-                            <h3>4th Sem Feedback Form </h3> 
-                            <h4>Deadline: 18th May 2022</h4>
-                        </div>
-                        <div>
-                            <Link to="/Feedbackconfirmation">
-                                <button class="form_button_blue">Submit Feedback</button>
-                            </Link>    
-                        </div>
-                    </div>
+                    <FormComp />
+                    <FormComp />
                 </div>          
             </div>
         </div>
