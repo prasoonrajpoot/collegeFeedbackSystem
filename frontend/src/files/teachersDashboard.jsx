@@ -6,33 +6,56 @@ function teachersDashboard(){
     return (
         <div>
             <div>
-                <h3>Deep Panchani</h3>
-                <h3>BT20CSE105</h3>
-                <h3>bt20cse105@iiitn.ac.in</h3>
-                <h3>2nd Year</h3>
-                <h3>4th Semester</h3>
-                <h3>Section B</h3>
-            </div>
-            <h1>Feedback Forms</h1>
-            <div>
-                <h3>4th Sem Feedback Form</h3>
-                <h4>Deadline: 18th May 2022</h4>
-                <button><span>Submit Feedback</span></button>
+                <h1>Deep Panchani</h1>
+                <h1>deeppanchani@iiitn.ac.in</h1>
             </div>
             <div>
-                <h3>4th Sem Feedback Form</h3>
-                <h4>Deadline: 18th May 2022</h4>
-                <button><span>Submit Feedback</span></button>
-            </div>
-            <div>
-                <h3>4th Sem Feedback Form</h3>
-                <h4>Deadline: 18th May 2022</h4>
-                <button><span>Submit Feedback</span></button>
-            </div>
-            <div>
-                <h3>4th Sem Feedback Form</h3>
-                <h4>Deadline: 18th May 2022</h4>
-                <button><span>Submit Feedback</span></button>
+                <h1>Feedback Responses</h1>
+                
+                <div>
+                    <div>
+                        <h2>4th Sem CSE Feedback Form</h2>
+                        <h2>DAA Section B</h2>
+                        <h2>Results On: 18th may 2022</h2>
+                    </div>
+                    <div>
+                        <button><span>View Responses</span></button>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <h2>4th Sem CSE Feedback Form</h2>
+                        <h2>DAA Section B</h2>
+                        <h2>Results On: 18th may 2022</h2>
+                    </div>
+                    <div>
+                        <button><span>View Responses</span></button>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <h2>4th Sem CSE Feedback Form</h2>
+                        <h2>DAA Section B</h2>
+                        <h2>Results On: 18th may 2022</h2>
+                    </div>
+                    <div>
+                        <button><span>View Responses</span></button>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <h2>4th Sem CSE Feedback Form</h2>
+                        <h2>DAA Section B</h2>
+                        <h2>Results On: 18th may 2022</h2>
+                    </div>
+                    <div>
+                        <button><span>View Responses</span></button>
+                    </div>
+                </div>
+
             </div>
         </div>
     )
