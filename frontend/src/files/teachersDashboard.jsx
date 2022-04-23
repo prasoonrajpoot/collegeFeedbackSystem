@@ -6,19 +6,19 @@ function teachersDashboard(){
     return (
         <div class="blue-box">
             <div>
-                <h1>Deep Panchani</h1>
-                <h1>deeppanchani@iiitn.ac.in</h1>
+                <span class="heading3">Deep Panchani </span>
+                <span class="heading3"><u>deeppanchani@iiitn.ac.in</u></span>
             </div>
             <div class="blue-box">
                 <h1>Feedback Responses</h1>
                 <div>
                     <div>
-                        <h2>4th Sem CSE Feedback Form</h2>
-                        <h2>DAA Section B</h2>
-                        <h2>Results On: 18th may 2022</h2>
+                        <h3>4th Sem CSE Feedback Form</h3>
+                        <h4>DAA Section B</h4>
+                        <span>Results On: 18th may 2022</span>
                     </div>
                     <div >
-                        <button><span>View Responses</span></button>
+                        <button class="form_button_blue">View Responses</button>
                     </div>
                 </div>
             </div>

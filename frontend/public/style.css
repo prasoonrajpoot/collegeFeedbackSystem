@@ -18,6 +18,46 @@ h2 {
     color: #393086;
 }
 
+h3 {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    color: #393086;
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #393086;
+}
+
+.heading1 {
+    font-weight: 500;
+    font-size: 30px;
+    color: #393086;
+}
+
+.heading2 {
+    font-weight: 500;
+    font-size: 26px;
+    color: #393086;
+}
+
+.heading3{
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    color: #393086;
+}
+
+.heading4{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #393086;
+}
+
 .form_button_blue {
     font-size: 21px;
     padding: 5px 20px;
@@ -27,7 +67,7 @@ h2 {
     font-size: 23px;  
     line-height: 25px;
     color: #FCFCFC;
-    border: none;
+    border: 2px solid #393086;
     margin: 10px 10px;
     box-sizing: border-box;
     box-shadow: 4px 4px 10px rgba(57, 48, 134, 0.25);
@@ -35,6 +75,7 @@ h2 {
 
 .form_button_blue:active {
     background: #5246c2;
+    border: 2px solid #5246c2;
 }
 
 .form_button_white {
@@ -103,4 +144,10 @@ h2 {
    
 .form__field::-ms-input-placeholder { /* Microsoft Edge */
     color: rgba(57, 48, 134, 0.8);
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
 }

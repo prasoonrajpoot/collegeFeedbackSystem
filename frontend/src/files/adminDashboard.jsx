@@ -9,7 +9,7 @@ function adminDashboard(){
             <div class="blue-box">
                 <h3>4th Sem Feedback Form</h3>
                 <h4>Deadline: 18th May 2022</h4>
-                <button><span>View Responses</span></button>
+                <button class="form_button_blue">View Responses</button>
             </div>
         </div>
     )
