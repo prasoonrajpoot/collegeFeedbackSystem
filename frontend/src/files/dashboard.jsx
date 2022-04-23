@@ -14,7 +14,7 @@ function DashboardLoggedIn(){
     var name = useSelector((state)=> state.Name );
     var Email = useSelector((state)=> state.Email);
     var section = useSelector((store)=> store.Section);
-    var semester = useSelector((state) => store.Semester);
+    var semester = useSelector((store) => store.Semester);
     
     console.log("reached");
 
