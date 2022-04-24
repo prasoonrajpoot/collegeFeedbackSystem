@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 
 
 function Question(props){
@@ -6,6 +6,7 @@ function Question(props){
     var teacher = props.teacher;
     var question = props.question;
 
+    var [response, setResponse] = React.useState([]);
     
     return(
         <div>
