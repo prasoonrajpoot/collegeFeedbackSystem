@@ -28,7 +28,9 @@ const FeedbackForm = () => {
   const sendFormData = async () => {
     var data = {data: responses};
     var reply = axios.post("/saveformdata", data);
-    console.log(reply);
+    if(reply.data == "recieved"){
+      alert("Response Saved");
+    }
   }
 
   const submitButtonPressed = (event) => {
@@ -40,7 +42,7 @@ const FeedbackForm = () => {
    <div style={{width:1000, margin:"auto",padding:"auto"}}>
      {allSubjects.map((suject, index) => <QuestionSet questions = {allQuestions} allSubjects = {allSubjects} allTeachers = {allTeachers}
           index = {index}     responses = {responses} setResponses = {setResponses}   />)}
-      <button type="submit" class="form_button_blue">Submit Form</button>
+      <button type="submit" onClick = {submitButtonPressed} class="form_button_blue">Submit Form</button>
    </div>
   )
 }

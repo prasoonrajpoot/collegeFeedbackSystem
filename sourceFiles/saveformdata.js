@@ -14,14 +14,15 @@ app.post("/", (req,res)=>{
     for(var i = 0; i < len ; i++){
         var object = data[i];
         var response = new Responses({
-            teacher : data.teacher,
-            subject: data.subject,
-            answer: data.data
+            teacher : object.teacher,
+            subject: object.subject,
+            answer: object.data
             
         })
 
         try{
             response.save();
+            res.send("recieved");
         }
         catch(err){
             console.log("we are having problem saving form results");
