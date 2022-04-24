@@ -64,6 +64,7 @@ function QuestionSet(props){
 
     React.useEffect(()=> {
         var obj = {"subject" : currentSubject,
+        "teacher" : currentTeacher,
                     "data" : response}
 
         var temp_responses = responses;
