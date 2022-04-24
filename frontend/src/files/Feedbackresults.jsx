@@ -28,15 +28,15 @@ function Feedbackresults(){
             </div>
             <div style={{width:864, alignItems:"left",margin:"auto",padding:10}}>
                 <div style={{paddingTop:10,paddingBottom:15}}>
-                    <h4>Q1. Rate the Punctuality of Proff Name in their class? </h4>
-                    <h4><b>Avg Score: 3.5</b></h4>
+                    <h4>Q1. Rate the Punctuality of Proff Name in their class?</h4>
+                    <h4><b>Avg Score: </b></h4>
                     <div>
                         <Bar 
                         data={{
-                                labels:['1⭐','2⭐','3⭐','4⭐','5⭐'],
+                                labels:['0⭐','1⭐','2⭐','3⭐','4⭐','5⭐'],
                                 datasets: [
                                     {
-                                        data: [20, 10, 20,30,40],
+                                        data: [11,20,10,20,30,40],
                                         backgroundColor: [
                                             'rgba(255, 99, 132, 0.2)',
                                             'rgba(54, 162, 235, 0.2)',
