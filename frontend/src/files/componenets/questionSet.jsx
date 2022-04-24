@@ -20,28 +20,23 @@ function Question(props){
         console.log(response);
         // console.log(response[ind] === "5")
     }
-
-    
-
-    
+    var names = ind.toString().concat(index.toString());
+    var id1 = ind.toString().concat(index.toString()).concat("1");
+    var id2 = ind.toString().concat(index.toString()).concat("2");
+    var id3 = ind.toString().concat(index.toString()).concat("3");
+    var id4 = ind.toString().concat(index.toString()).concat("4");
+    var id5 = ind.toString().concat(index.toString()).concat("5");
+    var id6 = ind.toString().concat(index.toString()).concat("6");
     return(
         <div>
         <label class="heading3" htmlFor="q1">Q{ind + 1}. {question} </label><br />
         <span class="star-cb-group">
-        <fieldset>
-          <label ><input type="radio" name="rating1" value="5" required  
-          onChange= {handleChange}  /></label>
-          <label ><input type="radio"  name="rating1" value="4" required 
-          onChange= {handleChange}  /></label>
-          <label > <input type="radio"  name="rating1" value="3" required
-          onChange= {handleChange}   /></label>
-          <label ><input type="radio"  name="rating1" value="2" required 
-          onChange= {handleChange}  /></label>
-          <label ><input type="radio"  name="rating1" value="1" required 
-          onChange= {handleChange}  /></label>
-          <label ><input type="radio"  name="rating1" value="0" required class="star-cb-clear"
-          onChange= {handleChange}   /></label>
-        </fieldset>
+          <input type="radio" id={id1} name={names} value="5" required onChange= {handleChange}  /><label for={id1}>5</label>
+          <input type="radio" id={id2}  name={names} value="4" required onChange= {handleChange}  /><label for={id2}>4</label>
+          <input type="radio" id={id3}  name={names} value="3" required onChange= {handleChange}   /><label for={id3}>3</label>
+          <input type="radio" id={id4}  name={names} value="2" required onChange= {handleChange}  /><label for={id4}>2</label>
+          <input type="radio" id={id5}  name={names} value="1" required onChange= {handleChange}  /> <label for={id5}>1</label>
+          <input type="radio" id={id6}  name={names} value="0" required class="star-cb-clear" onChange= {handleChange}/><label for={id6}>0</label>
         </span>
         <br />
     </div>

@@ -9,8 +9,6 @@ import {useLocation} from 'react-router-dom';
 
 function Subjects(props){
 
-    //  console.log("ques are " + props.ques);
-
     return (
         <div class="blue-box" style={{width:700}}>
             <h2>Feedback Forms</h2>
@@ -39,16 +37,6 @@ function Feedbackconfirmation(){
     const formid = location.state.id;
 
     const questions = location.state.ques;
-
-
-
-
-
-    // console.log("Form id is " + formid);
-
-    // console.log("ques are " + ques);
-
-
 
     React.useEffect(()=> {
 

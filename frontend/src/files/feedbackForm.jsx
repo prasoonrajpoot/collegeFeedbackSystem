@@ -32,10 +32,10 @@ const FeedbackForm = () => {
 
   }
   return (
-   <div>
+   <div style={{width:1000, margin:"auto",padding:"auto"}}>
      {allSubjects.map((suject, index) => <QuestionSet questions = {allQuestions} allSubjects = {allSubjects} allTeachers = {allTeachers}
           index = {index}     responses = {responses} setResponses = {setResponses}   />)}
-      <button type="submit">Submit Form</button>
+      <button type="submit" class="form_button_blue">Submit Form</button>
    </div>
   )
 }
