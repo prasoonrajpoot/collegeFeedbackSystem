@@ -74,21 +74,7 @@ function AdminDashboard(){
 
     return (
         <div style={{width:864, margin:"auto", padding:"auto"}}>
-            
-            <div class="blue-box">
-                <h1>Feedback Forms</h1>
-                <div class="blue-box grid_container" style={{width:671, height:148, margin:"auto", padding:0,  marginTop:15,marginBottom:15}}>
-                    <div style={{margin:"auto", padding:"auto"}}>
-                        <h3>4th Sem Feedback Form</h3>
-                        <h4>Deadline: 18th May 2022</h4>
-                    </div>
-                    <div style={{margin:"auto", padding:"auto"}}>
-                        <button class="form_button_blue">View Responses</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="blue-box" style={{width:500, marginTop:15,marginBottom:15}}>
+            <div class="blue-box" style={{width:500, marginTop:30,marginBottom:15}}>
                 <h1>Add teacher</h1>
                 <form action="">
                     <input class="form__field" type="text" placeholder = "Teacher's Name" value = {TeacherName} 
@@ -97,7 +83,7 @@ function AdminDashboard(){
                 </form>
             </div>
 
-            <div class="blue-box" style={{width:500, marginTop:15,marginBottom:15}}>
+            <div class="blue-box" style={{width:500, marginTop:30,marginBottom:15}}>
             <h1>Add Subjects</h1>
                 <form action="">
                     <input class="form__field" type="text" placeholder = "Enter Subject Name" value = {SubjectName}
@@ -108,7 +94,7 @@ function AdminDashboard(){
                 </form>
             </div>
 
-            <div class="blue-box" style={{width:500, marginTop:15,marginBottom:15}} >
+            <div class="blue-box" style={{width:500, marginTop:30,marginBottom:15}} >
                 <h1>Float FeedBack Forms  For</h1>
                 <form action="">
                     <input class="form__field" type="text" placeholder = "Enter Branch" value = {formBranch} 
