@@ -17,6 +17,7 @@ import AddSubjectFile from "./sourceFiles/addSubject.js";
 import AddFlotFormsFile from "./sourceFiles/floatforms.js";
 import GetFormDataFile from "./sourceFiles/getFormData.js";
 import GetSubjectsFile from "./sourceFiles/getSubjects.js";
+import GetSaveFormDataFile from "./sourceFiles/saveformdata.js";
 
 
 
@@ -34,6 +35,9 @@ app.use("/addsubject", AddSubjectFile);
 app.use("/floatforms", AddFlotFormsFile);
 app.use("/getformdata", GetFormDataFile);
 app.use("/getsubjects", GetSubjectsFile);
+app.use("/saveformdata", GetSaveFormDataFile);
+
+
 
 
 if(process.env.NODE_ENV === 'production'){

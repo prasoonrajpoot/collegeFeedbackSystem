@@ -2,6 +2,8 @@ import React from 'react'
 import {useLocation} from 'react-router-dom';
 
 import QuestionSet from './componenets/questionSet';
+import axios from "axios";
+
 
 const FeedbackForm = () => {
 
@@ -19,23 +21,26 @@ const FeedbackForm = () => {
 
   React.useEffect(()=> {
     console.log("there's a change again");
-    console.log(responses);
+    // console.log(responses);
   }, [responses]);
 
 
-  // const sendFormData = async () => {
-  //   var data = 
-  // }
+  const sendFormData = async () => {
+    var data = {data: responses};
+    var reply = axios.post("/saveformdata", data);
+    console.log(reply);
+  }
 
   const submitButtonPressed = (event) => {
+      console.log("we are here");
       event.preventDefault();
-
+      sendFormData()
   }
   return (
    <div>
      {allSubjects.map((suject, index) => <QuestionSet questions = {allQuestions} allSubjects = {allSubjects} allTeachers = {allTeachers}
           index = {index}     responses = {responses} setResponses = {setResponses}   />)}
-      <button type="submit">Submit Form</button>
+      <button type="submit" onClick = {submitButtonPressed} >Submit Form dfadsf</button>
    </div>
   )
 }

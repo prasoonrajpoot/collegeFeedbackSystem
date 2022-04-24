@@ -2,8 +2,18 @@ import mongoose from "mongoose"
 
 
 const responseScheema = mongoose.Schema({
+    teacher : {
+        type : String,
+        required : true,
+    },
+    subject : {
+        type : String,
+        required: true
+    },
+
     answer : {
-        type : [Object]
+        type : [String],
+        requierd : true
     }
     
 })
