@@ -4,7 +4,13 @@ import { Link } from "react-router-dom";
 
 import {useSelector} from "react-redux";
 
+import {useLocation} from 'react-router-dom';
+
+
 function Subjects(props){
+
+    //  console.log("ques are " + props.ques);
+
     return (
         <div class="blue-box" style={{width:700}}>
             <h2>Feedback Forms</h2>
@@ -12,7 +18,8 @@ function Subjects(props){
                 <span class="heading3">{props.name} </span>
                 <span class="heading3">{props.teacher}</span>
                 <div>
-                    <Link to="/feedbackForm">
+                    <Link to="/feedbackForm"  state = {{allSubjects : props.allSubjects,
+                         allTeachers : props.allTeachers, allQues: props.ques}}>
                         <button class="form_button_blue">Fill Feedback Form</button>
                     </Link>
                 </div>
@@ -26,6 +33,20 @@ function Feedbackconfirmation(){
     var [nullVar, setNullVar] = React.useState("");
 
     var [subject, setSubjects] = React.useState([""])
+
+    const location = useLocation();
+
+    const formid = location.state.id;
+
+    const questions = location.state.ques;
+
+
+
+
+
+    // console.log("Form id is " + formid);
+
+    // console.log("ques are " + ques);
 
 
 
@@ -43,15 +64,19 @@ function Feedbackconfirmation(){
         var data = {semester, Section, branch};
         console.log(data);  
         var response = await axios.post("/getsubjects",data );
-        console.log(response);
+        // console.log(response);
         setSubjects(response.data)
     }
 
-    
+    var allSubjects = subject.map(single => single.name);
+    var allTeachers = subject.map(single => single.teacher);
+
 
     return (
         <div>
-            {subject.map(single => <Subjects name = {single.name} teacher = {single.teacher} />)}
+            {subject.map(single => <Subjects 
+            name = {single.name} teacher = {single.teacher} ques = {questions}
+             formId = {formid} allSubjects = {allSubjects} allTeachers = {allTeachers} />)}
         </div>
     )
 }

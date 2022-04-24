@@ -26,7 +26,7 @@ function DashboardLoggedIn(){
             branch : branch
         }
         var response = await axios.post("/getformdata", obj );
-        console.log(response);
+        // console.log(response);
         setForms(response.data.forms);
     }
 
@@ -39,6 +39,7 @@ function DashboardLoggedIn(){
     
     // console.log("reached");
 
+    // console.log(forms)
 
     
 
@@ -58,7 +59,7 @@ function DashboardLoggedIn(){
                 <div class="grid_container" style={{marginTop:25}}>
                     {forms.map((single) => <FormComp sem = {single.Semester} 
                     branch = {single.Branch} section = {single.Section}
-                    id = {single.id} ques = {single.Ques}/>)}
+                    id = {single._id} ques = {single.Ques}/>)}
                 </div>          
             </div>
         </div>

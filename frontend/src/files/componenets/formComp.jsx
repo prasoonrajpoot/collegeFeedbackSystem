@@ -7,12 +7,15 @@ function FormComp(props){
     var section = props.section;
     var semester = props.sem;
     var questions = props.ques;
+    var id = props.id;
 
     var obj = {
         branch, section, semester, questions
     }
 
-    console.log(obj);
+    // console.log(obj);
+
+    // console.log(id);
     
     return (
         <div class="blue-box" style={{width:410}}>
@@ -21,9 +24,7 @@ function FormComp(props){
                 <h4>Deadline: 18th May 2022</h4>
             </div>
             <div>
-                <Link to= {{
-                    pathname: "/Feedbackconfirmation",
-                }} >
+                <Link to = "/Feedbackconfirmation" state = {{id : id, ques: questions}} >
                     <button class="form_button_blue">Submit Feedback</button>
                 </Link>    
             </div>
