@@ -23,10 +23,19 @@ const FeedbackForm = () => {
   }, [responses]);
 
 
+  // const sendFormData = async () => {
+  //   var data = 
+  // }
+
+  const submitButtonPressed = (event) => {
+      event.preventDefault();
+
+  }
   return (
    <div>
      {allSubjects.map((suject, index) => <QuestionSet questions = {allQuestions} allSubjects = {allSubjects} allTeachers = {allTeachers}
           index = {index}     responses = {responses} setResponses = {setResponses}   />)}
+      <button type="submit">Submit Form</button>
    </div>
   )
 }

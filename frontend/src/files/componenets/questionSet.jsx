@@ -17,7 +17,7 @@ function Question(props){
         var arraytemp = response;
         arraytemp[ind] = event.target.value;
         setResponse(arraytemp);
-        // console.log(response);
+        console.log(response);
         // console.log(response[ind] === "5")
     }
 
@@ -30,17 +30,17 @@ function Question(props){
         <span class="star-cb-group">
         <fieldset>
           <label ><input type="radio" name="rating1" value="5" required  
-          onChange= {handleChange} checked = {response[ind] === "5"} /></label>
+          onChange= {handleChange}  /></label>
           <label ><input type="radio"  name="rating1" value="4" required 
-          onChange= {handleChange} checked = {response[ind] === "4"} /></label>
+          onChange= {handleChange}  /></label>
           <label > <input type="radio"  name="rating1" value="3" required
-          onChange= {handleChange} checked = {response[ind] === "3"}  /></label>
+          onChange= {handleChange}   /></label>
           <label ><input type="radio"  name="rating1" value="2" required 
-          onChange= {handleChange} checked = {response[ind] === "2"} /></label>
+          onChange= {handleChange}  /></label>
           <label ><input type="radio"  name="rating1" value="1" required 
-          onChange= {handleChange} checked = {response[ind] === "1"} /></label>
+          onChange= {handleChange}  /></label>
           <label ><input type="radio"  name="rating1" value="0" required class="star-cb-clear"
-          onChange= {handleChange} checked = {response[ind] === "0"}   /></label>
+          onChange= {handleChange}   /></label>
         </fieldset>
         </span>
         <br />
@@ -86,7 +86,7 @@ function QuestionSet(props){
             <h1>{currentSubject } {currentTeacher}</h1>
             {questions.map((question, ind) => <Question question = {question} ind = {ind} index = {index}
                                     teacher = {currentTeacher} response = {response} setResponse = {setResponse}/>)}
-            <button class="form_button_blue">Submit Responces</button>
+            {/* <button class="form_button_blue">Submit Responces</button> */}
         </form>
     </div>
     )
