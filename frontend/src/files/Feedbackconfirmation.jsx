@@ -62,7 +62,7 @@ function Feedbackconfirmation(){
 
     const getSubjects = async() => {
         var data = {semester, Section, branch};
-        console.log(data);  
+        // console.log(data);  
         var response = await axios.post("/getsubjects",data );
         // console.log(response);
         setSubjects(response.data)

@@ -13,15 +13,20 @@ const FeedbackForm = () => {
   // console.log("all subjects are " + allSubjects);
   // console.log("all teachers are " + allTeachers);
   // console.log("all ques are " + allQuestions);
-  
+
+  var [responses , setResponses] = React.useState([{}]);
 
 
+  React.useEffect(()=> {
+    console.log("there's a change again");
+    console.log(responses);
+  }, [responses]);
 
 
   return (
    <div>
      {allSubjects.map((suject, index) => <QuestionSet questions = {allQuestions} allSubjects = {allSubjects} allTeachers = {allTeachers}
-          index = {index}        />)}
+          index = {index}     responses = {responses} setResponses = {setResponses}   />)}
    </div>
   )
 }
