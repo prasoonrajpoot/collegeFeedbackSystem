@@ -80,8 +80,19 @@ function Register() {
 
   return (
     <div>
+      <div class="navbar">
+        <span class="navbar-element" style={{ width: 130.6 }}></span>
+        <span class="navbar-element" style={{ margin: "auto" }}>
+          <h2 style={{ margin: "auto" }}>IIITN Feedback System</h2>
+        </span>
+        <span class="navbar-element" style={{}}>
+          <Link to="/login">
+            <button class="form_button_blue">Log In</button>
+          </Link>
+        </span>
+      </div>
       <div class="blue-box" style={{ width: 460 }}>
-        <h2 style={{paddingBottom:10}}>Registration</h2>
+        <h2 style={{ paddingBottom: 10 }}>Registration</h2>
         <form action="">
           <input
             type="text"
@@ -106,13 +117,35 @@ function Register() {
             max="8"
             onChange={(e) => setSemester(e.target.value)}
             value={semester}
-          /><br />
-          <input type="text" placeholder="Section" class="form__field" onChange={(e) => setSection(e.target.value)} value={section} />
+          />
           <br />
-          <input type="password" placeholder="Password" class="form__field" onChange={(e) => setPassword(e.target.value)} value={password}/>
+          <input
+            type="text"
+            placeholder="Section"
+            class="form__field"
+            onChange={(e) => setSection(e.target.value)}
+            value={section}
+          />
           <br />
-          <button class="form_button_blue" onClick={sendRegisterData}>Submit</button>
-          <button class="form_button_white" type="reset" onClick={resetInputField}>Cancel</button><br />
+          <input
+            type="password"
+            placeholder="Password"
+            class="form__field"
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
+          />
+          <br />
+          <button class="form_button_blue" onClick={sendRegisterData}>
+            Submit
+          </button>
+          <button
+            class="form_button_white"
+            type="reset"
+            onClick={resetInputField}
+          >
+            Cancel
+          </button>
+          <br />
           <GoogleLogin
             clientId="396893215612-v514renemo3tgeb85egqv0ltej6o7uip.apps.googleusercontent.com"
             buttonText="Login"
@@ -120,7 +153,11 @@ function Register() {
             onFailure={responseFailGoogle}
             cookiePolicy={"single_host_origin"}
             render={(renderProps) => (
-              <button class="form_button_blue" onClick={renderProps.onClick} style={{backgroundColor:"blue"}}>
+              <button
+                class="form_button_blue"
+                onClick={renderProps.onClick}
+                style={{ backgroundColor: "blue" }}
+              >
                 Resigter With Google
               </button>
             )}

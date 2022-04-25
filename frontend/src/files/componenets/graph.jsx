@@ -45,7 +45,9 @@ function Graph(props) {
         style={{ width: 864, alignItems: "left", margin: "auto", padding: 10 }}
       >
         <div style={{ paddingTop: 10, paddingBottom: 15 }}>
-          <h4>Q{count}. {questions[count-1]}</h4>
+          <h4>
+            Q{count}. {questions[count - 1]}
+          </h4>
           <h4>
             {}
             <b>Avg Score: {average(numberArray).toFixed(2)} </b>

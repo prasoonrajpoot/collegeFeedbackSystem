@@ -101,7 +101,6 @@ h4 {
 .navbar {   
     display: flex;
     justify-content: center;
-    padding: 12px;
     margin-bottom: 25px;
     background: #FCFCFC;
     box-shadow: 0px 4px 4px rgba(57, 48, 134, 0.25);
