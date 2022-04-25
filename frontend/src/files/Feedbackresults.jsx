@@ -27,7 +27,11 @@ function FeedbackResults(){
     }, [])
 
     return (
-        <div >
+        <div class="blue-box" style={{width:1000, marginBottom:30}}>
+            <div>
+                <h1>4th Semester CSE Feedback Form</h1>
+                <h3>CP Section B Deep Panchani</h3>
+            </div>
             {data.map((single) => <Graph data = {single} ></Graph>)}
         </div>
         

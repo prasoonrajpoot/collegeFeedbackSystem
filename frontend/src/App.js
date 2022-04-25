@@ -17,14 +17,15 @@ function App() {
     <Router>
         <Navbar />
       <Routes>
-        <Route  path = "/login"  element = {<Login />}/>
+        <Route path = ""  element = {<Register />}/>
+        <Route path = "/login"  element = {<Login />}/>
         <Route path = "/register" element = {<Register />}/>
         <Route path = "/dashboard" element = {<Dashboard />}/>
-        <Route path = "/teachersDashboard" element = {<Teachersdashboard />} />
-        <Route path = "/adminDashboard" element = {<Admindashboard />} />
-        <Route path = "/feedbackconfirmation" element = {<Feedbackconfirmation />} />
-        <Route path = "/feedbackForm" element = {<FeedbackForm />} />
-        <Route exact path = "/feedbackresults" element = {<FeedbackResults/>} />
+        <Route path = "/teachers-dashboard" element = {<Teachersdashboard />} />
+        <Route path = "/admin-dashboard" element = {<Admindashboard />} />
+        <Route path = "/feedback-confirmation" element = {<Feedbackconfirmation />} />
+        <Route path = "/feedback-form" element = {<FeedbackForm />} />
+        <Route exact path = "/feedback-results" element = {<FeedbackResults/>} />
       </Routes> 
     </Router>
   )
