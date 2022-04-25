@@ -20,10 +20,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/teachersdashboard" element={<Teachersdashboard />} />
         <Route path="/admindashboard" element={<Admindashboard />} />
-        <Route
-          path="/feedbackconfirmation"
-          element={<Feedbackconfirmation />}
-        />
+        <Route path="/feedbackconfirmation" element={<Feedbackconfirmation />} />
         <Route path="/feedbackform" element={<FeedbackForm />} />
         <Route exact path="/feedbackresults" element={<FeedbackResults />} />
       </Routes>
