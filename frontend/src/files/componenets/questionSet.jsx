@@ -1,4 +1,5 @@
 import React from "react";
+import {useSelector} from "react-redux";
 
 //ind for index of question no
 //index for index of subjects
@@ -45,6 +46,7 @@ function Question(props){
 
 function QuestionSet(props){
 
+    var email = useSelector((state) => state.Email);
     var index = props.index;
     var questions = props.questions;
     var allSubjects = props.allSubjects;
@@ -65,7 +67,8 @@ function QuestionSet(props){
     React.useEffect(()=> {
         var obj = {"subject" : currentSubject,
         "teacher" : currentTeacher,
-                    "data" : response}
+                    "data" : response,
+                "email" : email}
 
         var temp_responses = responses;
         temp_responses[index] = obj;

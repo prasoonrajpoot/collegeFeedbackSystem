@@ -3,7 +3,21 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 
-function teachersDashboard(){
+function TeachersDashboard(){
+
+    var [nullvar, setNull] = React.useState("");
+
+
+    const getTeachersData = async() => {
+        var response = await axios.post("/getformresults");
+        console.log(response);
+    }
+
+    React.useEffect(()=> {
+        getTeachersData();
+    }, [nullvar]);
+
+    
     return (
         <div class="blue-box" style={{width:864}}>
             <div>
@@ -29,6 +43,6 @@ function teachersDashboard(){
     )
 }
 
-export default teachersDashboard;
+export default TeachersDashboard;
 
 

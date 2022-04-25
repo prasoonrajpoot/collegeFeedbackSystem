@@ -14,6 +14,10 @@ const responseScheema = mongoose.Schema({
     answer : {
         type : [String],
         requierd : true
+    },
+    by: {
+        type : String,
+        required : true
     }
     
 })

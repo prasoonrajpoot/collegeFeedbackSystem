@@ -13,11 +13,12 @@ app.post("/", (req,res)=>{
     var len = data.length
     for(var i = 0; i < len ; i++){
         var object = data[i];
+        console.log(object);
         var response = new Responses({
             teacher : object.teacher,
             subject: object.subject,
-            answer: object.data
-            
+            answer: object.data,
+            by: object.email
         })
 
         try{

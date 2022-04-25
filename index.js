@@ -18,6 +18,7 @@ import AddFlotFormsFile from "./sourceFiles/floatforms.js";
 import GetFormDataFile from "./sourceFiles/getFormData.js";
 import GetSubjectsFile from "./sourceFiles/getSubjects.js";
 import GetSaveFormDataFile from "./sourceFiles/saveformdata.js";
+import GetFormResultsFile from "./sourceFiles/sendFormResults.js";
 
 
 
@@ -36,7 +37,7 @@ app.use("/floatforms", AddFlotFormsFile);
 app.use("/getformdata", GetFormDataFile);
 app.use("/getsubjects", GetSubjectsFile);
 app.use("/saveformdata", GetSaveFormDataFile);
-
+app.use("/getformresults", GetFormResultsFile);
 
 
 
