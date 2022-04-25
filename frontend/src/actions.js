@@ -1,69 +1,64 @@
-
-
 export const LogInAction = () => {
-    return ({
-        type : "Login"
-    })
+  return {
+    type: "Login",
+  };
 };
 
-
 export const LogOutAction = () => {
-    return ({
-        type : "Logout"
-    })
+  return {
+    type: "Logout",
+  };
 };
 
 export const SetEmailAction = (email) => {
-    return ({
-        type : "SetEmail",
-        payload : email
-    })
-}
+  return {
+    type: "SetEmail",
+    payload: email,
+  };
+};
 
 export const RemoveEmailAction = () => {
-    return ({
-        type : "RemoveEmail"
-    })
+  return {
+    type: "RemoveEmail",
+  };
 };
 
 export const SetNameAction = (name) => {
-    return ({
-        type : "SetName",
-        payload : name
-    })
-}
-
+  return {
+    type: "SetName",
+    payload: name,
+  };
+};
 
 export const RemoveNameAction = () => {
-    return ({
-        type : "RemoveName"
-    })
+  return {
+    type: "RemoveName",
+  };
 };
 
 export const SetPrivalage = (privilage) => {
-    return ({
-        type : "SetPrivilage",
-        payload : privilage
-    })
+  return {
+    type: "SetPrivilage",
+    payload: privilage,
+  };
 };
 
 export const RemovePrivilage = () => {
-    return ({
-        type : "RemovePrivilage"
-    })
+  return {
+    type: "RemovePrivilage",
+  };
 };
 
-
 export const SetSemesterAction = (semester) => {
-    return ({
-        type : "SetSemester",
-        payload : semester
-    })
-}
+  return {
+    type: "SetSemester",
+    payload: semester,
+  };
+};
 
 export const SetSectionAction = (section) => {
-    return ({
-        type : "SetSection",
-        payload: section
-    })
-}
+  return {
+    type: "SetSection",
+    payload: section,
+  };
+};
