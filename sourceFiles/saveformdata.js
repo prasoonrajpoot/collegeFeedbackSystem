@@ -13,7 +13,7 @@ app.post("/", (req,res)=>{
     var len = data.length
     for(var i = 0; i < len ; i++){
         var object = data[i];
-        console.log(object);
+        // console.log(object);
         var response = new Responses({
             teacher : object.teacher,
             subject: object.subject,
@@ -23,7 +23,6 @@ app.post("/", (req,res)=>{
 
         try{
             response.save();
-            res.send("recieved");
         }
         catch(err){
             console.log("we are having problem saving form results");
