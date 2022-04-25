@@ -10,7 +10,7 @@ import Teachersdashboard from "./files/teachersDashboard.jsx";
 import Admindashboard from "./files/adminDashboard.jsx";
 import Feedbackconfirmation from "./files/Feedbackconfirmation.jsx";
 import FeedbackForm from "./files/feedbackForm.jsx"
-import Feedbackresults from "./files/Feedbackresults.jsx";
+import FeedbackResults from "./files/Feedbackresults.jsx";
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
         <Route path = "/adminDashboard" element = {<Admindashboard />} />
         <Route path = "/feedbackconfirmation" element = {<Feedbackconfirmation />} />
         <Route path = "/feedbackForm" element = {<FeedbackForm />} />
-        <Route path = "/feedbackresults" element = {<Feedbackresults/>} />
+        <Route exact path = "/feedbackresults" element = {<FeedbackResults/>} />
       </Routes> 
     </Router>
   )

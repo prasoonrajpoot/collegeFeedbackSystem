@@ -25,7 +25,7 @@ function FormComp(props){
             </div>
             <div>
                 <Link to = "/Feedbackconfirmation" state = {{id : id, ques: questions}} >
-                    <button class="form_button_blue">Submit Feedback</button>
+                    <button className="form_button_blue">Submit Feedback</button>
                 </Link>    
             </div>
         </div>
